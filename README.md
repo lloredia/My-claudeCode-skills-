@@ -17,7 +17,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/skills-1282-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/categories-25+-purple?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/categories-39-purple?style=for-the-badge" />
   <img src="https://img.shields.io/badge/claude--code-compatible-green?style=for-the-badge" />
 </p>
 
@@ -47,6 +47,55 @@ git clone https://github.com/lloredia/My-claudeCode-skills-.git ~/.claude/skills
 ```
 
 Skills are automatically available in Claude Code after cloning. Use them with `/skill-name` in any conversation.
+
+---
+
+## Directory Map
+
+All 1,282 skills are organized into **39 category folders**:
+
+```
+~/.claude/skills/
+├── ai-ml/                    (100)  LLMs, agents, RAG, ML pipelines, data science
+├── ai-personas/               (13)  Steve Jobs, Elon Musk, Yann LeCun, etc.
+├── apify/                     (12)  Web scraping & data extraction platform
+├── architecture-patterns/     (25)  DDD, microservices, event sourcing, CQRS
+├── azure/                    (120)  Azure SDKs across .NET, Java, Python, TS, Rust
+├── backend/                   (64)  APIs, Node.js, Python, Go, Rust, Java frameworks
+├── business-product/          (41)  Product management, startups, analytics, legal
+├── cloud-devops/              (69)  Docker, K8s, Terraform, AWS, CI/CD, monitoring
+├── conductor/                  (7)  Conductor workflow management
+├── context-memory/            (18)  Context management & agent memory systems
+├── database/                  (27)  SQL, NoSQL, migrations, vector DBs, optimization
+├── design-uiux/               (47)  UI/UX, design systems, media, accessibility
+├── dev-tools/                 (95)  Git, debugging, refactoring, code quality, CLI
+├── docs-writing/              (35)  Technical writing, wikis, documentation
+├── documents/                 (13)  PDF, DOCX, PPTX, XLSX generation
+├── expo/                       (8)  Expo/React Native deployment & tooling
+├── frontend/                  (55)  React, Angular, Svelte, Next.js, Tailwind
+├── functional-programming/    (15)  fp-ts, Either, TaskEither, pipe/flow
+├── game-dev/                   (9)  Unity, Unreal, Godot, Bevy
+├── health-wellness/           (19)  Fitness, nutrition, sleep, mental health analysis
+├── hig-apple/                 (14)  Apple Human Interface Guidelines
+├── hugging-face/               (8)  Model training, datasets, evaluation
+├── integrations-automation/  (100)  Slack, GitHub, Jira, Notion, 50+ SaaS platforms
+├── languages/                 (41)  Python, TypeScript, Go, Rust, C++, Bash, etc.
+├── leiloeiro/                  (7)  Brazilian auction analysis (Portuguese)
+├── makepad/                   (13)  Makepad UI framework for Rust
+├── miscellaneous/             (14)  Uncategorized / niche skills
+├── mobile/                    (12)  iOS, Android, Flutter, React Native
+├── n8n-automation/             (7)  n8n workflow automation
+├── odoo/                      (24)  Odoo ERP modules & configuration
+├── payments-fintech/          (25)  Stripe, PayPal, crypto, DeFi, billing
+├── robius/                     (5)  Robius cross-platform framework
+├── scientific-computing/      (15)  Qiskit, SciPy, BioPython, Matplotlib
+├── security/                  (80)  Pentesting, OWASP, threat modeling, hardening
+├── seo-marketing/             (42)  SEO, content marketing, CRO, paid ads
+├── skills-meta/               (32)  Skill creation, Claude Code tools, MCP
+├── testing-qa/                (34)  TDD, E2E, Playwright, code review, load testing
+├── three-js/                  (13)  Three.js 3D graphics & WebGL
+└── wordpress/                  (4)  WordPress dev, themes, plugins, WooCommerce
+```
 
 ---
 
@@ -530,13 +579,14 @@ git add -A && git commit -m "Add new skill" && git push
 
 ```
 ~/.claude/skills/
-├── skill-name/
-│   ├── SKILL.md          # Main skill definition (required)
-│   ├── references/        # Reference docs (optional)
-│   ├── scripts/           # Helper scripts (optional)
-│   └── examples/          # Usage examples (optional)
-├── another-skill/
-│   └── SKILL.md
+├── category-name/             # Category folder (e.g., security/, frontend/)
+│   ├── skill-name/
+│   │   ├── SKILL.md           # Main skill definition (required)
+│   │   ├── references/        # Reference docs (optional)
+│   │   ├── scripts/           # Helper scripts (optional)
+│   │   └── examples/          # Usage examples (optional)
+│   └── another-skill/
+│       └── SKILL.md
 └── README.md
 ```
 
@@ -547,14 +597,16 @@ git add -A && git commit -m "Add new skill" && git push
 | Metric | Count |
 |--------|-------|
 | **Total Skills** | 1,282 |
-| **Categories** | 25+ |
-| **Azure SDK Skills** | 70+ |
-| **Language-Specific** | 20+ |
-| **Security Skills** | 25+ |
-| **Automation Integrations** | 50+ |
-| **Odoo ERP Skills** | 20+ |
-| **Health & Wellness** | 11 |
-| **AI Personas** | 9 |
+| **Category Folders** | 39 |
+| **Azure SDK Skills** | 120 |
+| **AI & ML Skills** | 100 |
+| **Integrations** | 100 |
+| **Dev Tools** | 95 |
+| **Security Skills** | 80 |
+| **Cloud & DevOps** | 69 |
+| **Backend** | 64 |
+| **Frontend** | 55 |
+| **Languages** | 41 |
 
 ---
 
