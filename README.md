@@ -1,576 +1,583 @@
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Claude_AI_logo.svg/1200px-Claude_AI_logo.svg.png" alt="Claude Code Skills" width="120" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Claude_AI_logo.svg/1200px-Claude_AI_logo.svg.png" alt="Claude Code Skills" width="100" />
 </p>
 
 <h1 align="center">Claude Code Skills Collection</h1>
 
 <p align="center">
-  <strong>1,282 curated skills for Claude Code — the largest open collection available.</strong>
+  <strong>1,282 curated skills across 39 categories — the largest open collection for Claude Code.</strong>
 </p>
 
 <p align="center">
-  <a href="#installation">Installation</a> &bull;
-  <a href="#categories">Categories</a> &bull;
-  <a href="#usage">Usage</a> &bull;
-  <a href="#contributing">Contributing</a>
+  <a href="#-quick-start">Quick Start</a> &bull;
+  <a href="#-category-breakdown">Categories</a> &bull;
+  <a href="#-skill-highlights">Highlights</a> &bull;
+  <a href="#-usage">Usage</a> &bull;
+  <a href="#-contributing">Contributing</a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/skills-1282-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/categories-39-purple?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/claude--code-compatible-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/total_skills-1,282-0066FF?style=for-the-badge&labelColor=000" />
+  <img src="https://img.shields.io/badge/categories-39-8B5CF6?style=for-the-badge&labelColor=000" />
+  <img src="https://img.shields.io/badge/claude_code-compatible-10B981?style=for-the-badge&labelColor=000" />
+  <img src="https://img.shields.io/badge/license-open-F59E0B?style=for-the-badge&labelColor=000" />
 </p>
 
 ---
 
 ## What Are Skills?
 
-Skills are markdown-based instruction sets that give Claude Code specialized expertise on demand. Instead of generic responses, skills provide **domain-specific patterns, best practices, and production-ready templates** for any technology or workflow.
+Skills are **plug-and-play expertise modules** for Claude Code. Each skill transforms Claude into a domain specialist with production-ready patterns, security best practices, and framework-specific knowledge.
 
 ```
-/react-patterns       → Claude becomes a React architecture expert
-/docker-expert        → Claude becomes a containerization specialist
-/stripe-integration   → Claude builds PCI-compliant payment flows
-/ethical-hacking      → Claude runs security assessments
+You:    /react-patterns        →  Claude becomes a React architecture expert
+You:    /docker-expert         →  Claude optimizes containers & hardens security
+You:    /stripe-integration    →  Claude builds PCI-compliant payment flows
+You:    /ethical-hacking       →  Claude runs full penetration test assessments
+You:    /kubernetes-architect  →  Claude designs production K8s clusters
 ```
 
 ---
 
-## Installation
+## Quick Start
 
 ```bash
-# Clone directly into your Claude Code skills directory
-git clone git@github.com:lloredia/My-claudeCode-skills-.git ~/.claude/skills
-
-# Or via HTTPS
+# One command to install all 1,282 skills
 git clone https://github.com/lloredia/My-claudeCode-skills-.git ~/.claude/skills
 ```
 
-Skills are automatically available in Claude Code after cloning. Use them with `/skill-name` in any conversation.
-
----
-
-## Directory Map
-
-All 1,282 skills are organized into **39 category folders**:
-
+Then in Claude Code, invoke any skill:
 ```
-~/.claude/skills/
-├── ai-ml/                    (100)  LLMs, agents, RAG, ML pipelines, data science
-├── ai-personas/               (13)  Steve Jobs, Elon Musk, Yann LeCun, etc.
-├── apify/                     (12)  Web scraping & data extraction platform
-├── architecture-patterns/     (25)  DDD, microservices, event sourcing, CQRS
-├── azure/                    (120)  Azure SDKs across .NET, Java, Python, TS, Rust
-├── backend/                   (64)  APIs, Node.js, Python, Go, Rust, Java frameworks
-├── business-product/          (41)  Product management, startups, analytics, legal
-├── cloud-devops/              (69)  Docker, K8s, Terraform, AWS, CI/CD, monitoring
-├── conductor/                  (7)  Conductor workflow management
-├── context-memory/            (18)  Context management & agent memory systems
-├── database/                  (27)  SQL, NoSQL, migrations, vector DBs, optimization
-├── design-uiux/               (47)  UI/UX, design systems, media, accessibility
-├── dev-tools/                 (95)  Git, debugging, refactoring, code quality, CLI
-├── docs-writing/              (35)  Technical writing, wikis, documentation
-├── documents/                 (13)  PDF, DOCX, PPTX, XLSX generation
-├── expo/                       (8)  Expo/React Native deployment & tooling
-├── frontend/                  (55)  React, Angular, Svelte, Next.js, Tailwind
-├── functional-programming/    (15)  fp-ts, Either, TaskEither, pipe/flow
-├── game-dev/                   (9)  Unity, Unreal, Godot, Bevy
-├── health-wellness/           (19)  Fitness, nutrition, sleep, mental health analysis
-├── hig-apple/                 (14)  Apple Human Interface Guidelines
-├── hugging-face/               (8)  Model training, datasets, evaluation
-├── integrations-automation/  (100)  Slack, GitHub, Jira, Notion, 50+ SaaS platforms
-├── languages/                 (41)  Python, TypeScript, Go, Rust, C++, Bash, etc.
-├── leiloeiro/                  (7)  Brazilian auction analysis (Portuguese)
-├── makepad/                   (13)  Makepad UI framework for Rust
-├── miscellaneous/             (14)  Uncategorized / niche skills
-├── mobile/                    (12)  iOS, Android, Flutter, React Native
-├── n8n-automation/             (7)  n8n workflow automation
-├── odoo/                      (24)  Odoo ERP modules & configuration
-├── payments-fintech/          (25)  Stripe, PayPal, crypto, DeFi, billing
-├── robius/                     (5)  Robius cross-platform framework
-├── scientific-computing/      (15)  Qiskit, SciPy, BioPython, Matplotlib
-├── security/                  (80)  Pentesting, OWASP, threat modeling, hardening
-├── seo-marketing/             (42)  SEO, content marketing, CRO, paid ads
-├── skills-meta/               (32)  Skill creation, Claude Code tools, MCP
-├── testing-qa/                (34)  TDD, E2E, Playwright, code review, load testing
-├── three-js/                  (13)  Three.js 3D graphics & WebGL
-└── wordpress/                  (4)  WordPress dev, themes, plugins, WooCommerce
+/skill-name
 ```
 
 ---
 
-## Categories
+## Distribution Overview
 
-### Security & Penetration Testing
-> Offensive security, vulnerability scanning, compliance, and hardening
+```
+AI & Machine Learning    ████████████████████████████████████████████  100
+Integrations & Automation████████████████████████████████████████████  100
+Azure SDK Collection     ██████████████████████████████████████████████████  120
+Developer Tools          ██████████████████████████████████████████  95
+Security & Pentesting    █████████████████████████████████████  80
+Cloud & DevOps           ████████████████████████████████  69
+Backend Development      █████████████████████████████  64
+Frontend Development     ████████████████████████  55
+Design & UI/UX           █████████████████████  47
+SEO & Marketing          ███████████████████  42
+Languages                ██████████████████  41
+Business & Product       ██████████████████  41
+Documentation            ███████████████  35
+Testing & QA             ██████████████  34
+Skills & Meta Tools      █████████████  32
+Database                 ████████████  27
+Payments & Fintech       ███████████  25
+Architecture             ███████████  25
+Odoo ERP                 ██████████  24
+Health & Wellness        █████████  19
+Other (13 categories)    ██████████████████████████  ~130
+```
 
-| Skill | Description |
-|-------|-------------|
-| `007` | Full security audit — STRIDE/PASTA threat modeling, OWASP, Red/Blue Team |
-| `active-directory-attacks` | Active Directory exploitation techniques |
-| `api-security-testing` | REST/GraphQL API security testing workflows |
-| `broken-authentication` | Auth bypass and session management testing |
-| `burp-suite-testing` | Web app security testing with Burp Suite |
-| `cloud-penetration-testing` | AWS/Azure/GCP security assessments |
-| `ethical-hacking-methodology` | Full penetration testing lifecycle |
-| `file-path-traversal` | Path traversal vulnerability identification |
-| `gha-security-review` | GitHub Actions workflow security audit |
-| `idor-testing` | Insecure direct object reference testing |
-| `linux-privilege-escalation` | Linux privesc enumeration and exploitation |
-| `malware-analyst` | Malware reverse engineering and analysis |
-| `metasploit-framework` | Metasploit exploitation framework |
-| `pentest-checklist` | Comprehensive pentest checklists |
-| `red-team-tactics` | Red team engagement methodologies |
-| `scanning-tools` | Nmap, Nikto, and security scanner mastery |
-| `shodan-reconnaissance` | Internet-facing asset reconnaissance |
+---
+
+## Category Breakdown
+
+<!-- ═══════════════════════════════════════════ -->
+
+### <img src="https://img.shields.io/badge/-AI%20%26%20ML-FF6B6B?style=flat-square" /> AI & Machine Learning `100 skills`
+
+> LLM applications, multi-agent systems, RAG, embeddings, ML pipelines, prompt engineering
+
+<p>
+  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=000" />
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" />
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
+| `ai-engineer` | Production LLM apps, RAG systems, and intelligent agents |
+| `ai-agents-architect` | Multi-agent orchestration and swarm design |
+| `langgraph` | LangGraph stateful agent workflows |
+| `crewai` | Multi-agent collaboration with CrewAI |
+| `pydantic-ai` | Type-safe AI agents with Pydantic |
+| `rag-implementation` | Retrieval-Augmented Generation architecture |
+| `prompt-engineering` | Advanced prompt design and optimization |
+| `llm-evaluation` | LLM output quality evaluation frameworks |
+| `computer-vision-expert` | SOTA computer vision techniques |
+| `voice-ai-development` | Real-time conversational voice AI |
+
+<!-- ═══════════════════════════════════════════ -->
+
+### <img src="https://img.shields.io/badge/-Security-DC2626?style=flat-square" /> Security & Penetration Testing `80 skills`
+
+> Offensive security, OWASP, threat modeling, vulnerability scanning, compliance, hardening
+
+<p>
+  <img src="https://img.shields.io/badge/Burp_Suite-FF6633?style=flat-square&logo=burpsuite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Metasploit-2596CD?style=flat-square&logo=metasploit&logoColor=white" />
+  <img src="https://img.shields.io/badge/OWASP-000000?style=flat-square&logo=owasp&logoColor=white" />
+  <img src="https://img.shields.io/badge/Nmap-4682B4?style=flat-square" />
+  <img src="https://img.shields.io/badge/Wireshark-1679A7?style=flat-square&logo=wireshark&logoColor=white" />
+  <img src="https://img.shields.io/badge/Semgrep-22A47F?style=flat-square" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
+| `007` | Full security audit — STRIDE/PASTA, OWASP, Red/Blue Team |
+| `ethical-hacking-methodology` | Complete penetration testing lifecycle |
+| `burp-suite-testing` | Web application security testing |
 | `sql-injection-testing` | SQL injection detection and exploitation |
-| `ssh-penetration-testing` | SSH service security assessment |
+| `xss-html-injection` | Cross-site scripting attacks and defense |
+| `cloud-penetration-testing` | AWS/Azure/GCP security assessments |
+| `threat-modeling-expert` | STRIDE methodology and risk mapping |
 | `vulnerability-scanner` | Automated vulnerability analysis |
-| `web-security-testing` | Full web application security testing |
-| `windows-privilege-escalation` | Windows privesc techniques |
-| `xss-html-injection` | Cross-site scripting and HTML injection |
-| `zeroize-audit` | Sensitive data memory zeroization audit |
+| `malware-analyst` | Malware reverse engineering |
+| `red-team-tactics` | Red team engagement strategies |
 
-### Frontend Development
-> React, Angular, Vue, Next.js, UI components, and design systems
+<!-- ═══════════════════════════════════════════ -->
 
-| Skill | Description |
-|-------|-------------|
-| `react-patterns` | Modern React hooks, composition, and TypeScript patterns |
-| `react-best-practices` | Performance optimization for React apps |
-| `react-state-management` | Redux, Zustand, Jotai, and state patterns |
-| `react-modernization` | Class-to-hooks migration and version upgrades |
-| `nextjs-best-practices` | Next.js App Router, SSR, and ISR patterns |
-| `nextjs-app-router-patterns` | Advanced App Router patterns |
-| `angular` | Angular 20+ with signals and modern patterns |
-| `angular-best-practices` | Angular performance and architecture |
+### <img src="https://img.shields.io/badge/-Frontend-3B82F6?style=flat-square" /> Frontend Development `55 skills`
+
+> React, Next.js, Angular, Svelte, Astro, Tailwind, design systems, component architecture
+
+<p>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=000" />
+  <img src="https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" />
+  <img src="https://img.shields.io/badge/Svelte-FF3E00?style=flat-square&logo=svelte&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
+| `react-patterns` | Hooks, composition, and TypeScript patterns |
+| `nextjs-best-practices` | App Router, SSR, ISR, and RSC patterns |
+| `angular` | Angular 20+ with signals and standalone components |
 | `sveltekit` | Full-stack SvelteKit applications |
-| `astro` | Content-focused static site generation |
-| `senior-frontend` | Senior-level frontend architecture |
-| `frontend-dev-guidelines` | React + TypeScript + Suspense-first guidelines |
-| `shadcn` | shadcn/ui component management |
-| `radix-ui-design-system` | Accessible design systems with Radix |
-| `tailwind-patterns` | Tailwind CSS v4 patterns |
 | `tailwind-design-system` | Production design systems with Tailwind |
-| `tanstack-query-expert` | TanStack Query data fetching patterns |
-| `zustand-store-ts` | Zustand state management stores |
+| `shadcn` | shadcn/ui component management |
+| `react-state-management` | Zustand, Jotai, Redux patterns |
+| `astro` | Content-focused static site generation |
+| `electron-development` | Desktop apps with Electron |
+| `progressive-web-app` | PWA architecture and service workers |
 
-### Backend Development
-> APIs, microservices, databases, and server architecture
+<!-- ═══════════════════════════════════════════ -->
 
-| Skill | Description |
-|-------|-------------|
+### <img src="https://img.shields.io/badge/-Backend-10B981?style=flat-square" /> Backend Development `64 skills`
+
+> REST/GraphQL/gRPC APIs, microservices, serverless, auth, real-time systems
+
+<p>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white" />
+  <img src="https://img.shields.io/badge/gRPC-244C5A?style=flat-square" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
 | `backend-architect` | Scalable API design and distributed systems |
-| `nestjs-expert` | Nest.js with decorators and dependency injection |
+| `nestjs-expert` | Nest.js with DI, decorators, and middleware |
 | `fastapi-pro` | High-performance async Python APIs |
-| `django-pro` | Django 5.x with async views and modern patterns |
+| `django-pro` | Django 5.x with async views |
 | `laravel-expert` | Production Laravel engineering |
-| `hono` | Ultra-fast web APIs with Hono |
-| `golang-pro` | Go 1.21+ with modern concurrency patterns |
-| `rust-pro` | Rust 1.75+ with async and systems programming |
-| `java-pro` | Java 21+ with virtual threads and records |
-| `python-pro` | Python 3.12+ with modern features |
-| `typescript-pro` | Advanced TypeScript patterns |
-| `elixir-pro` | Elixir with OTP and Phoenix |
-| `ruby-pro` | Idiomatic Ruby with metaprogramming |
 | `graphql-architect` | GraphQL federation and schema design |
-| `grpc-golang` | Production gRPC services in Go |
+| `hono` | Ultra-fast edge-ready web APIs |
 | `trpc-fullstack` | End-to-end type-safe APIs |
+| `firebase` | Firebase backend-as-a-service |
+| `supabase-automation` | Supabase CLI, auth, and edge functions |
 
-### Mobile Development
-> iOS, Android, React Native, Flutter, and Expo
+<!-- ═══════════════════════════════════════════ -->
 
-| Skill | Description |
-|-------|-------------|
+### <img src="https://img.shields.io/badge/-Cloud%20%26%20DevOps-F59E0B?style=flat-square" /> Cloud & DevOps `69 skills`
+
+> AWS, GCP, Docker, Kubernetes, Terraform, CI/CD, monitoring, incident response
+
+<p>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
+  <img src="https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
+| `docker-expert` | Container optimization and security hardening |
+| `kubernetes-architect` | K8s cluster design and GitOps |
+| `terraform-specialist` | Terraform/OpenTofu IaC patterns |
+| `aws-skills` | AWS infrastructure and services |
+| `github-actions-templates` | Production CI/CD workflows |
+| `grafana-dashboards` | Monitoring dashboard creation |
+| `helm-chart-scaffolding` | K8s Helm chart development |
+| `gitops-workflow` | GitOps with ArgoCD/Flux |
+| `incident-responder` | SRE incident response |
+| `cloud-architect` | Multi-cloud architecture design |
+
+<!-- ═══════════════════════════════════════════ -->
+
+### <img src="https://img.shields.io/badge/-Azure-0078D4?style=flat-square" /> Azure SDK Collection `120 skills`
+
+> Complete Azure service SDKs across .NET, Java, Python, TypeScript, and Rust
+
+<p>
+  <img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
+  <img src="https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Rust-000?style=flat-square&logo=rust&logoColor=white" />
+</p>
+
+| Service Area | Skills |
+|-------------|--------|
+| **AI & Cognitive** | `azure-ai-openai-dotnet`, `azure-ai-projects-*`, `azure-ai-vision-*`, `azure-ai-voicelive-*` |
+| **Storage** | `azure-storage-blob-*`, `azure-storage-queue-*`, `azure-cosmos-*` |
+| **Messaging** | `azure-servicebus-*`, `azure-eventhub-*`, `azure-eventgrid-*` |
+| **Identity & Security** | `azure-identity-*`, `azure-keyvault-*`, `azure-security-*` |
+| **Monitoring** | `azure-monitor-*`, `azure-appconfiguration-*` |
+| **Management** | `azure-mgmt-*`, `azure-resource-manager-*` |
+
+<!-- ═══════════════════════════════════════════ -->
+
+### <img src="https://img.shields.io/badge/-Database-8B5CF6?style=flat-square" /> Database `27 skills`
+
+> PostgreSQL, NoSQL, vector databases, migrations, query optimization, ORMs
+
+<p>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pinecone-000?style=flat-square" />
+  <img src="https://img.shields.io/badge/Neon-00E699?style=flat-square" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
+| `postgresql-optimization` | PostgreSQL performance tuning |
+| `database-architect` | Database architecture and design |
+| `prisma-expert` | Prisma ORM advanced patterns |
+| `drizzle-orm-expert` | Drizzle ORM for TypeScript |
+| `vector-database-engineer` | Vector DBs for AI/RAG |
+| `sql-optimization-patterns` | Slow query transformation |
+| `database-migration` | Zero-downtime schema migrations |
+| `neon-postgres` | Serverless Postgres with Neon |
+
+<!-- ═══════════════════════════════════════════ -->
+
+### <img src="https://img.shields.io/badge/-Mobile-EC4899?style=flat-square" /> Mobile Development `12 skills` + Expo `8 skills`
+
+> iOS (Swift/SwiftUI), Android (Kotlin/Compose), React Native, Flutter
+
+<p>
+  <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" />
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" />
+  <img src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=000" />
+  <img src="https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
 | `ios-developer` | Native iOS with Swift/SwiftUI |
-| `ios-swift-development` | Swift app architecture patterns |
-| `swiftui-expert-skill` | SwiftUI component design |
 | `android-jetpack-compose-expert` | Modern Android with Compose |
 | `flutter-expert` | Cross-platform Flutter with Dart 3 |
 | `react-native-architecture` | Production React Native patterns |
-| `mobile-developer` | Cross-platform mobile development |
-| `mobile-design` | Mobile UX patterns and touch interactions |
 | `expo-deployment` | Expo production deployment |
-| `expo-dev-client` | Expo development client builds |
-| `expo-tailwind-setup` | Tailwind CSS in Expo apps |
 | `app-store-optimization` | ASO for iOS and Android |
-| `building-native-ui` | Native UI component development |
 
-### Cloud & DevOps
-> AWS, Azure, GCP, Docker, Kubernetes, CI/CD, and infrastructure
+<!-- ═══════════════════════════════════════════ -->
 
-| Skill | Description |
-|-------|-------------|
-| `docker-expert` | Container optimization and security hardening |
-| `kubernetes-architect` | K8s architecture and cluster design |
-| `kubernetes-deployment` | K8s deployment workflows |
-| `terraform-specialist` | Terraform/OpenTofu IaC patterns |
-| `aws-skills` | AWS development and infrastructure |
-| `aws-serverless` | Lambda, API Gateway, DynamoDB |
-| `cloud-architect` | Multi-cloud architecture design |
-| `gcp-cloud-run` | Google Cloud Run deployments |
-| `devops-engineer` | Dockerfiles, CI/CD, and automation |
-| `github-actions-templates` | Production GitHub Actions workflows |
-| `gitlab-ci-patterns` | GitLab CI/CD pipeline patterns |
-| `helm-chart-scaffolding` | Kubernetes Helm charts |
-| `cloudformation-best-practices` | AWS CloudFormation templates |
-| `cdk-patterns` | AWS CDK infrastructure patterns |
-| `gitops-workflow` | GitOps with ArgoCD/Flux |
-| `istio-traffic-management` | Istio service mesh traffic control |
-| `prometheus-configuration` | Prometheus monitoring setup |
-| `grafana-dashboards` | Production Grafana dashboards |
+### <img src="https://img.shields.io/badge/-Testing-14B8A6?style=flat-square" /> Testing & Quality `34 skills`
 
-### Database
-> SQL, NoSQL, migrations, optimization, and architecture
+> TDD, E2E testing, Playwright, Jest, Pytest, code review, load testing
 
-| Skill | Description |
-|-------|-------------|
-| `database-architect` | Database architecture and design |
-| `database-optimizer` | Query and index optimization |
-| `postgresql` | PostgreSQL-specific schema design |
-| `postgresql-optimization` | PostgreSQL performance tuning |
-| `prisma-expert` | Prisma ORM patterns |
-| `drizzle-orm-expert` | Drizzle ORM for TypeScript |
-| `nosql-expert` | Distributed NoSQL guidance |
-| `database-migration` | Schema and data migration patterns |
-| `sql-optimization-patterns` | Slow query transformation |
-| `sql-pro` | Modern SQL with cloud-native patterns |
-| `vector-database-engineer` | Vector DBs and embedding strategies |
-| `neon-postgres` | Serverless Postgres with Neon |
-| `convex` | Convex reactive backend |
+<p>
+  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" />
+  <img src="https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" />
+  <img src="https://img.shields.io/badge/k6-7D64FF?style=flat-square&logo=k6&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white" />
+</p>
 
-### AI & Machine Learning
-> LLMs, agents, RAG, embeddings, ML pipelines, and AI engineering
-
-| Skill | Description |
-|-------|-------------|
-| `ai-engineer` | Production LLM applications and RAG systems |
-| `ai-agent-development` | AI agent architecture and tools |
-| `ai-agents-architect` | Multi-agent system design |
-| `langgraph` | LangGraph agent orchestration |
-| `langchain-architecture` | LangChain framework mastery |
-| `pydantic-ai` | Production AI agents with Pydantic |
-| `crewai` | Multi-agent collaboration with CrewAI |
-| `ml-engineer` | Production ML systems with Python |
-| `mlops-engineer` | ML pipelines and deployment |
-| `rag-implementation` | RAG architecture and retrieval |
-| `embedding-strategies` | Embedding selection and optimization |
-| `llm-evaluation` | LLM evaluation frameworks |
-| `llm-structured-output` | Reliable JSON/typed output from LLMs |
-| `prompt-engineering` | Advanced prompt design patterns |
-| `computer-vision-expert` | SOTA computer vision (2026) |
-| `voice-ai-development` | Real-time voice AI systems |
-| `local-llm-expert` | Local LLM inference and optimization |
-
-### Payments & Fintech
-> Stripe, PayPal, billing, PCI compliance, and crypto
-
-| Skill | Description |
-|-------|-------------|
-| `stripe-integration` | Stripe checkout, subscriptions, webhooks |
-| `paypal-integration` | PayPal payment processing |
-| `payment-integration` | Multi-processor payment flows |
-| `billing-automation` | Automated billing systems |
-| `pci-compliance` | PCI DSS implementation |
-| `plaid-fintech` | Plaid Link financial data |
-| `crypto-bd-agent` | Crypto business development patterns |
-| `defi-protocol-templates` | DeFi protocol implementation |
-| `blockchain-developer` | Web3 and smart contract development |
-| `solidity-security` | Smart contract security |
-
-### Testing & Quality
-> Unit testing, E2E, TDD, code review, and quality assurance
-
-| Skill | Description |
-|-------|-------------|
-| `test-driven-development` | TDD workflow and patterns |
-| `tdd-orchestrator` | TDD red-green-refactor orchestration |
-| `e2e-testing` | End-to-end testing with Playwright |
-| `playwright-skill` | Complete browser automation |
+| Top Skills | What It Does |
+|-----------|-------------|
+| `test-driven-development` | TDD red-green-refactor workflow |
+| `playwright-skill` | Browser automation and E2E testing |
 | `javascript-testing-patterns` | Jest/Vitest testing guide |
 | `python-testing-patterns` | Pytest patterns and strategies |
 | `code-review-excellence` | High-quality code review practices |
-| `code-reviewer` | Automated code review |
-| `unit-testing-test-generate` | Comprehensive test generation |
-| `k6-load-testing` | Load testing with k6 |
-| `webapp-testing` | Local web app testing |
-| `test-fixing` | Systematic test failure resolution |
+| `k6-load-testing` | Performance and load testing |
+| `tdd-orchestrator` | Full TDD workflow orchestration |
 
-### SEO & Marketing
-> Search optimization, content strategy, and growth
+<!-- ═══════════════════════════════════════════ -->
 
-| Skill | Description |
-|-------|-------------|
-| `seo-fundamentals` | Core SEO principles and E-E-A-T |
-| `seo-audit` | Technical SEO auditing |
-| `seo-content-writer` | SEO-optimized content creation |
-| `seo-keyword-strategist` | Keyword analysis and strategy |
-| `seo-meta-optimizer` | Meta title and description optimization |
-| `programmatic-seo` | Programmatic SEO at scale |
-| `marketing-psychology` | Behavioral science for marketing |
-| `content-marketer` | Content marketing strategy |
-| `paid-ads` | Performance marketing and PPC |
-| `copywriting` | Conversion-focused copywriting |
-| `growth-engine` | Product growth engineering |
-| `analytics-tracking` | Analytics implementation and auditing |
+### <img src="https://img.shields.io/badge/-Integrations-6366F1?style=flat-square" /> Integrations & Automation `100 skills`
 
-### Third-Party Integrations & Automation
-> SaaS APIs, workflow automation, and platform integrations
+> 50+ SaaS platforms — Slack, GitHub, Jira, Notion, HubSpot, Stripe, and more
 
-| Skill | Description |
-|-------|-------------|
-| `slack-automation` | Slack workspace automation |
+<p>
+  <img src="https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=slack&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=jira&logoColor=white" />
+  <img src="https://img.shields.io/badge/Notion-000?style=flat-square&logo=notion&logoColor=white" />
+  <img src="https://img.shields.io/badge/Zapier-FF4A00?style=flat-square&logo=zapier&logoColor=white" />
+  <img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
 | `slack-bot-builder` | Slack Bolt bot framework |
 | `github-automation` | GitHub repos, issues, and PRs |
 | `jira-automation` | Jira task automation |
 | `notion-automation` | Notion workspace automation |
-| `hubspot-automation` | HubSpot CRM operations |
-| `salesforce-automation` | Salesforce task automation |
-| `discord-automation` | Discord server automation |
-| `telegram-automation` | Telegram messaging automation |
+| `discord-bot-architect` | Production Discord bots |
+| `telegram-bot-builder` | Telegram bot development |
+| `shopify-development` | Shopify apps and themes |
 | `zapier-make-patterns` | No-code automation architecture |
-| `n8n-workflow-patterns` | n8n workflow design |
-| `linear-automation` | Linear issue management |
-| `shopify-automation` | Shopify store automation |
-| `mailchimp-automation` | Email marketing automation |
-| `sendgrid-automation` | Email delivery automation |
-| `figma-automation` | Figma design automation |
-| `vercel-automation` | Vercel deployment automation |
+| `hubspot-automation` | HubSpot CRM operations |
 
-### Architecture & Patterns
-> System design, DDD, microservices, event sourcing, and architecture decisions
+<!-- ═══════════════════════════════════════════ -->
 
-| Skill | Description |
-|-------|-------------|
-| `architecture` | Architectural decision-making frameworks |
-| `architecture-decision-records` | ADR creation patterns |
-| `microservices-patterns` | Microservices architecture mastery |
+### <img src="https://img.shields.io/badge/-Payments-059669?style=flat-square" /> Payments & Fintech `25 skills`
+
+> Stripe, PayPal, crypto, DeFi, billing, PCI compliance, financial modeling
+
+<p>
+  <img src="https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white" />
+  <img src="https://img.shields.io/badge/PayPal-003087?style=flat-square&logo=paypal&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ethereum-3C3C3D?style=flat-square&logo=ethereum&logoColor=white" />
+  <img src="https://img.shields.io/badge/Solidity-363636?style=flat-square&logo=solidity&logoColor=white" />
+  <img src="https://img.shields.io/badge/Plaid-000?style=flat-square" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
+| `stripe-integration` | Checkout, subscriptions, and webhooks |
+| `paypal-integration` | PayPal payment processing |
+| `pci-compliance` | PCI DSS compliance implementation |
+| `blockchain-developer` | Web3 and smart contract development |
+| `solidity-security` | Smart contract security auditing |
+| `defi-protocol-templates` | DeFi protocol implementation |
+
+<!-- ═══════════════════════════════════════════ -->
+
+### <img src="https://img.shields.io/badge/-Architecture-7C3AED?style=flat-square" /> Architecture & Patterns `25 skills`
+
+> DDD, microservices, event sourcing, CQRS, clean architecture, ADRs
+
+<p>
+  <img src="https://img.shields.io/badge/DDD-000?style=flat-square" />
+  <img src="https://img.shields.io/badge/CQRS-444?style=flat-square" />
+  <img src="https://img.shields.io/badge/Event_Sourcing-666?style=flat-square" />
+  <img src="https://img.shields.io/badge/C4_Model-004488?style=flat-square" />
+  <img src="https://img.shields.io/badge/Clean_Architecture-888?style=flat-square" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
 | `domain-driven-design` | DDD strategic and tactical design |
+| `microservices-patterns` | Microservices architecture mastery |
 | `event-sourcing-architect` | Event sourcing and CQRS |
+| `architecture-decision-records` | ADR creation and management |
 | `saga-orchestration` | Distributed transaction patterns |
-| `cqrs-implementation` | Command Query Responsibility Segregation |
-| `api-design-principles` | REST and GraphQL API design |
-| `monorepo-management` | Monorepo architecture with Nx/Turborepo |
-| `clean-code` | Clean code principles |
-| `software-architecture` | Quality-focused software design |
-| `senior-architect` | Senior architecture patterns |
+| `clean-code` | Clean code principles (Uncle Bob) |
 
-### Azure SDK Collection (70+)
-> Complete Azure service SDKs across .NET, Java, Python, TypeScript, and Rust
+<!-- ═══════════════════════════════════════════ -->
 
-| Category | Skills |
-|----------|--------|
-| **AI & Cognitive** | `azure-ai-openai-dotnet`, `azure-ai-projects-*`, `azure-ai-vision-*`, `azure-ai-voicelive-*`, `azure-ai-contentsafety-*` |
-| **Storage** | `azure-storage-blob-*`, `azure-storage-queue-*`, `azure-storage-file-*`, `azure-cosmos-*` |
-| **Messaging** | `azure-servicebus-*`, `azure-eventhub-*`, `azure-eventgrid-*`, `azure-web-pubsub-*` |
-| **Security** | `azure-identity-*`, `azure-keyvault-*`, `azure-security-*` |
-| **Monitoring** | `azure-monitor-*`, `azure-appconfiguration-*` |
-| **Management** | `azure-mgmt-*`, `azure-resource-manager-*` |
+### <img src="https://img.shields.io/badge/-Languages-F97316?style=flat-square" /> Programming Languages `41 skills`
 
-### Game Development
-> Unity, Unreal, Godot, Bevy, and Makepad
+> Deep expertise for 15+ languages including Python, TypeScript, Go, Rust, Java, C++
 
-| Skill | Description |
-|-------|-------------|
-| `unity-developer` | Unity C# game development |
-| `unity-ecs-patterns` | Unity DOTS/ECS patterns |
-| `unreal-engine-cpp-pro` | Unreal Engine 5 C++ |
-| `godot-gdscript-patterns` | Godot 4 GDScript |
-| `godot-4-migration` | Godot version migration |
-| `bevy-ecs-expert` | Bevy ECS game engine (Rust) |
-| `makepad-*` | Makepad UI framework (11 skills) |
-| `game-development` | Game dev orchestrator |
-
-### Documentation & Writing
-> Technical writing, API docs, content creation, and wikis
-
-| Skill | Description |
-|-------|-------------|
-| `documentation` | Documentation generation workflows |
-| `docs-architect` | Technical documentation architecture |
-| `api-documentation` | API documentation generation |
-| `readme` | README file creation |
-| `wiki-architect` | Wiki structure design |
-| `wiki-page-writer` | Wiki content creation |
-| `blog-writing-guide` | Technical blog writing |
-| `scientific-writing` | Research paper writing |
-| `beautiful-prose` | High-quality prose writing |
-| `copy-editing` | Professional copy editing |
-| `tutorial-engineer` | Step-by-step tutorial creation |
-
-### Business & Product
-> Product management, startups, pricing, analytics, and strategy
-
-| Skill | Description |
-|-------|-------------|
-| `product-manager` | Senior PM with 6 knowledge domains |
-| `product-manager-toolkit` | PM tools and frameworks |
-| `startup-analyst` | Startup business analysis |
-| `startup-financial-modeling` | 3-5 year financial models |
-| `pricing-strategy` | Pricing and packaging design |
-| `competitive-landscape` | Competitive analysis frameworks |
-| `market-sizing-analysis` | TAM/SAM/SOM market sizing |
-| `business-analyst` | Modern business analysis |
-| `launch-strategy` | SaaS product launch planning |
-| `creating-financial-models` | Advanced financial modeling |
-
-### Health & Wellness
-> Health data analysis, nutrition, fitness, and medical information
-
-| Skill | Description |
-|-------|-------------|
-| `ai-analyzer` | AI-driven comprehensive health analysis |
-| `fitness-analyzer` | Exercise data analysis and training plans |
-| `nutrition-analyzer` | Nutrition pattern analysis |
-| `sleep-analyzer` | Sleep quality analysis |
-| `health-trend-analyzer` | Health data trend analysis |
-| `mental-health-analyzer` | Mental health pattern analysis |
-| `weightloss-analyzer` | Weight loss data and metabolic analysis |
-| `family-health-analyzer` | Family health history analysis |
-| `tcm-constitution-analyzer` | Traditional Chinese Medicine analysis |
-| `rehabilitation-analyzer` | Rehabilitation progress analysis |
-| `claude-ally-health` | Medical health assistant |
-
-### Design & UI/UX
-> Interface design, design systems, accessibility, and Apple HIG
-
-| Skill | Description |
-|-------|-------------|
-| `ui-ux-designer` | Interface design and wireframes |
-| `ui-ux-pro-max` | Advanced UI/UX intelligence |
-| `ui-designer` | Design system extraction |
-| `ui-styling` | Beautiful, accessible interfaces |
-| `hig-foundations` | Apple Human Interface Guidelines |
-| `hig-patterns` | Apple HIG interaction patterns |
-| `accessibility-compliance-accessibility-audit` | WCAG accessibility auditing |
-| `wcag-audit-patterns` | Web accessibility audit guide |
-| `mobile-design` | Mobile UX and touch patterns |
-| `frontend-design` | Production-grade visual design |
-| `design-orchestration` | Design workflow orchestration |
-
-### Developer Tools & Workflows
-> Git, CLI tools, debugging, refactoring, and developer experience
-
-| Skill | Description |
-|-------|-------------|
-| `commit` | Smart git commit workflow |
-| `git-advanced-workflows` | Advanced Git operations |
-| `git-pushing` | Stage, commit, and push workflow |
-| `create-branch` | Branch creation conventions |
-| `create-pr` | Pull request creation |
-| `pr-writer` | PR description writing |
-| `debugger` | Error and test debugging |
-| `systematic-debugging` | Root cause analysis methodology |
-| `code-simplifier` | Code simplification |
-| `dx-optimizer` | Developer experience improvement |
-| `environment-setup-guide` | Dev environment setup |
-| `vibe-code-auditor` | AI-generated code auditing |
-
-### Language-Specific Deep Dives
-> Expert-level guidance for individual programming languages
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" />
+  <img src="https://img.shields.io/badge/Rust-000?style=flat-square&logo=rust&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
+  <img src="https://img.shields.io/badge/Elixir-4B275F?style=flat-square&logo=elixir&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ruby-CC342D?style=flat-square&logo=ruby&logoColor=white" />
+</p>
 
 | Language | Skills |
 |----------|--------|
-| **Python** | `python-pro`, `python-patterns`, `python-testing-patterns`, `python-packaging`, `python-performance-optimization`, `async-python-patterns` |
-| **TypeScript** | `typescript-pro`, `typescript-expert`, `typescript-advanced-types`, `javascript-mastery`, `javascript-pro` |
-| **Go** | `golang-pro`, `go-concurrency-patterns`, `grpc-golang`, `temporal-golang-pro` |
+| **Python** | `python-pro`, `python-patterns`, `python-testing-patterns`, `python-packaging`, `async-python-patterns` |
+| **TypeScript/JS** | `typescript-pro`, `typescript-expert`, `typescript-advanced-types`, `javascript-mastery`, `javascript-pro` |
+| **Go** | `golang-pro`, `go-concurrency-patterns` |
 | **Rust** | `rust-pro`, `rust-async-patterns`, `systems-programming-rust-project` |
 | **C/C++** | `c-pro`, `cpp-pro`, `arm-cortex-expert` |
-| **Java** | `java-pro`, `kotlin-coroutines-expert`, `scala-pro` |
+| **JVM** | `java-pro`, `kotlin-coroutines-expert`, `scala-pro` |
+| **Shell** | `bash-pro`, `bash-scripting`, `posix-shell-pro`, `powershell-windows` |
 | **Other** | `ruby-pro`, `php-pro`, `elixir-pro`, `haskell-pro`, `julia-pro`, `csharp-pro` |
 
-### Odoo ERP (20+)
-> Complete Odoo ecosystem covering every module
+<!-- ═══════════════════════════════════════════ -->
 
-| Skill | Description |
+### <img src="https://img.shields.io/badge/-Design-D946EF?style=flat-square" /> Design & UI/UX `47 skills`
+
+> Interface design, design systems, accessibility, media generation, 3D graphics
+
+<p>
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" />
+  <img src="https://img.shields.io/badge/Three.js-000?style=flat-square&logo=threedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/WCAG-005A9C?style=flat-square" />
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white" />
+  <img src="https://img.shields.io/badge/Remotion-000?style=flat-square" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
+| `ui-ux-pro-max` | Advanced UI/UX design intelligence |
+| `ui-designer` | Design system extraction from references |
+| `accessibility-compliance-*` | WCAG accessibility auditing |
+| `threejs-skills` | 3D graphics with Three.js (13 skills) |
+| `remotion` | Programmatic video generation |
+| `canvas-design` | Visual art in PNG/PDF |
+| `favicon` | Favicon generation from source images |
+
+<!-- ═══════════════════════════════════════════ -->
+
+### <img src="https://img.shields.io/badge/-SEO%20%26%20Marketing-EF4444?style=flat-square" /> SEO & Marketing `42 skills`
+
+> Technical SEO, content strategy, CRO, paid ads, analytics, growth engineering
+
+<p>
+  <img src="https://img.shields.io/badge/Google_Analytics-E37400?style=flat-square&logo=googleanalytics&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ahrefs-FF8C00?style=flat-square" />
+  <img src="https://img.shields.io/badge/Schema.org-006DB0?style=flat-square" />
+  <img src="https://img.shields.io/badge/PostHog-000?style=flat-square&logo=posthog&logoColor=white" />
+  <img src="https://img.shields.io/badge/Mixpanel-7856FF?style=flat-square&logo=mixpanel&logoColor=white" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
+| `seo-audit` | Technical SEO auditing |
+| `seo-content-writer` | SEO-optimized content creation |
+| `seo-keyword-strategist` | Keyword analysis and strategy |
+| `marketing-psychology` | Behavioral science for marketing |
+| `paid-ads` | PPC and performance marketing |
+| `growth-engine` | Product growth engineering |
+| `analytics-tracking` | Analytics implementation and auditing |
+
+<!-- ═══════════════════════════════════════════ -->
+
+### <img src="https://img.shields.io/badge/-Dev%20Tools-374151?style=flat-square" /> Developer Tools & Workflows `95 skills`
+
+> Git workflows, debugging, refactoring, code quality, performance profiling, CLI tools
+
+<p>
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white" />
+  <img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=prettier&logoColor=000" />
+  <img src="https://img.shields.io/badge/ShellCheck-555?style=flat-square" />
+</p>
+
+| Top Skills | What It Does |
+|-----------|-------------|
+| `commit` | Smart git commit workflow |
+| `systematic-debugging` | Root cause analysis methodology |
+| `production-code-audit` | Deep codebase security + quality scan |
+| `vibe-code-auditor` | AI-generated code auditing |
+| `performance-optimizer` | Performance bottleneck identification |
+| `dx-optimizer` | Developer experience improvement |
+| `legacy-modernizer` | Legacy codebase refactoring |
+
+<!-- ═══════════════════════════════════════════ -->
+
+### <img src="https://img.shields.io/badge/-Business-0EA5E9?style=flat-square" /> Business & Product `41 skills`
+
+> Product management, startup strategy, financial modeling, competitive analysis, legal
+
+| Top Skills | What It Does |
+|-----------|-------------|
+| `product-manager` | Senior PM with 6 knowledge domains |
+| `startup-financial-modeling` | 3-5 year financial projections |
+| `pricing-strategy` | Pricing and packaging design |
+| `competitive-landscape` | Competitive analysis frameworks |
+| `market-sizing-analysis` | TAM/SAM/SOM sizing |
+| `launch-strategy` | SaaS product launch planning |
+
+<!-- ═══════════════════════════════════════════ -->
+
+### More Categories
+
+| Category | Skills | Highlights |
+|----------|--------|------------|
+| <img src="https://img.shields.io/badge/-Docs-64748B?style=flat-square" /> **Documentation** | 35 | `docs-architect`, `api-documentation`, `wiki-architect`, `tutorial-engineer` |
+| <img src="https://img.shields.io/badge/-Health-22C55E?style=flat-square" /> **Health & Wellness** | 19 | `fitness-analyzer`, `nutrition-analyzer`, `sleep-analyzer`, `mental-health-analyzer` |
+| <img src="https://img.shields.io/badge/-FP-A855F7?style=flat-square" /> **Functional Programming** | 15 | `fp-pragmatic`, `fp-async`, `fp-backend`, `fp-react`, `fp-refactor` |
+| <img src="https://img.shields.io/badge/-Science-06B6D4?style=flat-square" /> **Scientific Computing** | 15 | `qiskit`, `biopython`, `scikit-learn`, `matplotlib`, `astropy` |
+| <img src="https://img.shields.io/badge/-Odoo-714B67?style=flat-square" /> **Odoo ERP** | 24 | `odoo-module-developer`, `odoo-orm-expert`, `odoo-accounting-setup` |
+| <img src="https://img.shields.io/badge/-Apple-000?style=flat-square" /> **Apple HIG** | 14 | `hig-foundations`, `hig-patterns`, `hig-components-*` |
+| <img src="https://img.shields.io/badge/-Game-EAB308?style=flat-square" /> **Game Development** | 9 | `unity-developer`, `unreal-engine-cpp-pro`, `godot-gdscript-patterns`, `bevy-ecs-expert` |
+| <img src="https://img.shields.io/badge/-AI%20Personas-F472B6?style=flat-square" /> **AI Personas** | 13 | `steve-jobs`, `elon-musk`, `yann-lecun`, `andrej-karpathy`, `sam-altman` |
+| <img src="https://img.shields.io/badge/-Documents-78716C?style=flat-square" /> **Document Generation** | 13 | `pdf`, `docx`, `pptx`, `xlsx`, `latex-paper-conversion` |
+| <img src="https://img.shields.io/badge/-3D-000?style=flat-square" /> **Three.js** | 13 | `threejs-fundamentals`, `threejs-shaders`, `threejs-animation`, `threejs-materials` |
+| <img src="https://img.shields.io/badge/-Makepad-E44D26?style=flat-square" /> **Makepad** | 13 | `makepad-basics`, `makepad-widgets`, `makepad-shaders`, `makepad-layout` |
+| <img src="https://img.shields.io/badge/-HF-FFD21E?style=flat-square" /> **Hugging Face** | 8 | `hugging-face-model-trainer`, `hugging-face-datasets`, `hugging-face-cli` |
+| <img src="https://img.shields.io/badge/-WordPress-21759B?style=flat-square" /> **WordPress** | 4 | `wordpress`, `wordpress-plugin-development`, `wordpress-theme-development` |
+
+---
+
+## Skill Highlights
+
+### Most Powerful Skills
+
+| Skill | Category | Why It Stands Out |
+|-------|----------|------------------|
+| `007` | Security | Full-spectrum security audit in one command |
+| `ai-engineer` | AI/ML | Production LLM apps, RAG, agents, vector search |
+| `senior-fullstack` | Backend | Complete full-stack development toolkit |
+| `kubernetes-architect` | DevOps | Enterprise K8s with GitOps and multi-cluster |
+| `production-code-audit` | Dev Tools | Deep codebase scan with security + quality |
+| `loki-mode` | Dev Tools | PRD to production in one session |
+| `prompt-factory` | AI/ML | Mega-prompt generation across 15 domains |
+| `10x-fullstack-engineer` | Backend | Architecture, implement, debug, optimize, review |
+
+### Unique Skills You Didn't Know Existed
+
+| Skill | What It Does |
 |-------|-------------|
-| `odoo-module-developer` | Custom module creation |
-| `odoo-orm-expert` | ORM patterns and queries |
-| `odoo-xml-views-builder` | XML view construction |
-| `odoo-qweb-templates` | QWeb template engine |
-| `odoo-security-rules` | Access control and security |
-| `odoo-accounting-setup` | Accounting configuration |
-| `odoo-inventory-optimizer` | Inventory management |
-| `odoo-ecommerce-configurator` | eCommerce setup |
-| `odoo-hr-payroll-setup` | HR and payroll |
-| `odoo-manufacturing-advisor` | Manufacturing module |
-| `odoo-migration-helper` | Version migration guide |
-| `odoo-docker-deployment` | Docker deployment |
-
-### AI Personas
-> Simulated thought leaders for brainstorming and debate
-
-| Skill | Description |
-|-------|-------------|
-| `steve-jobs` | Product vision and design thinking |
-| `elon-musk` | First-principles engineering |
-| `bill-gates` | Technology strategy |
-| `warren-buffett` | Investment and business analysis |
-| `sam-altman` | AI and startup strategy |
-| `geoffrey-hinton` | Deep learning research |
-| `yann-lecun` | AI research and philosophy |
-| `andrej-karpathy` | Neural networks and AI engineering |
-| `ilya-sutskever` | AI safety and scaling |
-
-### Document Generation
-> PDF, DOCX, PPTX, XLSX, and office document creation
-
-| Skill | Description |
-|-------|-------------|
-| `pdf` / `pdf-official` | PDF creation and manipulation |
-| `docx` / `docx-official` | Word document generation |
-| `pptx` / `pptx-official` | PowerPoint presentation creation |
-| `xlsx` / `xlsx-official` | Excel spreadsheet generation |
-| `latex-paper-conversion` | LaTeX paper conversion |
-| `nanobanana-ppt-skills` | AI-powered PPT generation |
-
-### Functional Programming
-> fp-ts, Effect, and functional patterns for TypeScript
-
-| Skill | Description |
-|-------|-------------|
-| `fp-pragmatic` | Practical, jargon-free FP guide |
-| `fp-ts-pragmatic` | fp-ts practical patterns |
-| `fp-async` | Async patterns using TaskEither |
-| `fp-backend` | FP patterns for backend services |
-| `fp-react` | fp-ts patterns in React |
-| `fp-errors` | Error handling as values |
-| `fp-refactor` | Refactoring to functional style |
-| `fp-pipe-ref` | Pipe and flow quick reference |
-| `fp-either-ref` | Either type quick reference |
-| `fp-option-ref` | Option type quick reference |
+| `steve-jobs` | Brainstorm with a simulated Steve Jobs persona |
+| `tcm-constitution-analyzer` | Traditional Chinese Medicine body constitution analysis |
+| `qiskit` | Quantum computing circuit design |
+| `algorithmic-art` | Generative art with p5.js and creative coding |
+| `speed` | RSVP speed reader for long text |
+| `pipecat-friday-agent` | Iron Man FRIDAY-style voice AI assistant |
+| `explain-like-socrates` | Learn concepts through Socratic questioning |
 
 ---
 
 ## Usage
 
 ### Invoke a skill
+```bash
+/skill-name          # Activates the skill for your session
 ```
-/skill-name
-```
-Example: `/docker-expert` activates Docker expertise for your session.
 
 ### Find the right skill
+```bash
+/skill-router        # Describe your need, get routed to the best skill
 ```
-/skill-router
-```
-Describe your need and get routed to the best matching skill.
 
 ### Install on a new machine
 ```bash
-git clone git@github.com:lloredia/My-claudeCode-skills-.git ~/.claude/skills
+git clone https://github.com/lloredia/My-claudeCode-skills-.git ~/.claude/skills
 ```
 
-### Keep skills synced
+### Keep in sync
 ```bash
 cd ~/.claude/skills && git pull
-```
-
-### Add new skills
-```bash
-cd ~/.claude/skills
-# Add your skill folder with SKILL.md
-git add -A && git commit -m "Add new skill" && git push
 ```
 
 ---
@@ -579,14 +586,14 @@ git add -A && git commit -m "Add new skill" && git push
 
 ```
 ~/.claude/skills/
-├── category-name/             # Category folder (e.g., security/, frontend/)
+├── category-name/                # 39 category folders
 │   ├── skill-name/
-│   │   ├── SKILL.md           # Main skill definition (required)
-│   │   ├── references/        # Reference docs (optional)
-│   │   ├── scripts/           # Helper scripts (optional)
-│   │   └── examples/          # Usage examples (optional)
-│   └── another-skill/
-│       └── SKILL.md
+│   │   ├── SKILL.md              # Skill definition (required)
+│   │   ├── references/           # Reference docs (optional)
+│   │   ├── scripts/              # Helper scripts (optional)
+│   │   └── examples/             # Usage examples (optional)
+│   └── ...
+├── .gitignore
 └── README.md
 ```
 
@@ -594,27 +601,23 @@ git add -A && git commit -m "Add new skill" && git push
 
 ## Stats
 
-| Metric | Count |
-|--------|-------|
-| **Total Skills** | 1,282 |
-| **Category Folders** | 39 |
-| **Azure SDK Skills** | 120 |
-| **AI & ML Skills** | 100 |
-| **Integrations** | 100 |
-| **Dev Tools** | 95 |
-| **Security Skills** | 80 |
-| **Cloud & DevOps** | 69 |
-| **Backend** | 64 |
-| **Frontend** | 55 |
-| **Languages** | 41 |
+```
+Total Skills         1,282       Languages Covered    15+
+Categories              39       SaaS Integrations    50+
+Azure SDKs             120       Frameworks           40+
+Security Skills         80       AI/ML Skills         100
+```
 
 ---
 
 ## Contributing
 
 1. Fork this repository
-2. Create a new folder with your skill name
-3. Add a `SKILL.md` with proper frontmatter:
+2. Create a skill folder inside the appropriate category:
+```
+category-name/your-skill-name/SKILL.md
+```
+3. Use this frontmatter template:
 ```yaml
 ---
 name: your-skill-name
