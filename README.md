@@ -5,7 +5,7 @@
 <h1 align="center">Claude Code Skills Collection</h1>
 
 <p align="center">
-  <strong>1,282 curated skills across 39 categories — the largest open collection for Claude Code.</strong>
+  <strong>1,296 curated skills across 39 categories — the largest open collection for Claude Code.</strong>
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/total_skills-1,282-0066FF?style=for-the-badge&labelColor=000" />
+  <img src="https://img.shields.io/badge/total_skills-1,296-0066FF?style=for-the-badge&labelColor=000" />
   <img src="https://img.shields.io/badge/categories-39-8B5CF6?style=for-the-badge&labelColor=000" />
   <img src="https://img.shields.io/badge/claude_code-compatible-10B981?style=for-the-badge&labelColor=000" />
   <img src="https://img.shields.io/badge/license-open-F59E0B?style=for-the-badge&labelColor=000" />
@@ -42,7 +42,7 @@ You:    /kubernetes-architect  →  Claude designs production K8s clusters
 ## Quick Start
 
 ```bash
-# One command to install all 1,282 skills
+# One command to install all 1,296 skills
 git clone https://github.com/lloredia/My-claudeCode-skills-.git ~/.claude/skills
 ```
 
@@ -56,27 +56,28 @@ Then in Claude Code, invoke any skill:
 ## Distribution Overview
 
 ```
-AI & Machine Learning    ████████████████████████████████████████████  100
-Integrations & Automation████████████████████████████████████████████  100
 Azure SDK Collection     ██████████████████████████████████████████████████  120
+AI & Machine Learning    ████████████████████████████████████████████  100
+Integrations & Automation████████████████████████████████████████████  99
 Developer Tools          ██████████████████████████████████████████  95
-Security & Pentesting    █████████████████████████████████████  80
+Security & Pentesting    ██████████████████████████████████████  83
 Cloud & DevOps           ████████████████████████████████  69
-Backend Development      █████████████████████████████  64
-Frontend Development     ████████████████████████  55
+Backend Development      █████████████████████████████  65
+Frontend Development     ████████████████████████  54
 Design & UI/UX           █████████████████████  47
 SEO & Marketing          ███████████████████  42
 Languages                ██████████████████  41
 Business & Product       ██████████████████  41
-Documentation            ███████████████  35
+Documentation            ███████████████  34
 Testing & QA             ██████████████  34
 Skills & Meta Tools      █████████████  32
 Database                 ████████████  27
 Payments & Fintech       ███████████  25
 Architecture             ███████████  25
 Odoo ERP                 ██████████  24
+Game Development         █████████  19
 Health & Wellness        █████████  19
-Other (13 categories)    ██████████████████████████  ~130
+Other (12 categories)    █████████████████████████  ~150
 ```
 
 ---
@@ -113,7 +114,7 @@ Other (13 categories)    ██████████████████�
 
 <!-- ═══════════════════════════════════════════ -->
 
-### <img src="https://img.shields.io/badge/-Security-DC2626?style=flat-square" /> Security & Penetration Testing `80 skills`
+### <img src="https://img.shields.io/badge/-Security-DC2626?style=flat-square" /> Security & Penetration Testing `83 skills`
 
 > Offensive security, OWASP, threat modeling, vulnerability scanning, compliance, hardening
 
@@ -141,7 +142,7 @@ Other (13 categories)    ██████████████████�
 
 <!-- ═══════════════════════════════════════════ -->
 
-### <img src="https://img.shields.io/badge/-Frontend-3B82F6?style=flat-square" /> Frontend Development `55 skills`
+### <img src="https://img.shields.io/badge/-Frontend-3B82F6?style=flat-square" /> Frontend Development `54 skills`
 
 > React, Next.js, Angular, Svelte, Astro, Tailwind, design systems, component architecture
 
@@ -169,7 +170,7 @@ Other (13 categories)    ██████████████████�
 
 <!-- ═══════════════════════════════════════════ -->
 
-### <img src="https://img.shields.io/badge/-Backend-10B981?style=flat-square" /> Backend Development `64 skills`
+### <img src="https://img.shields.io/badge/-Backend-10B981?style=flat-square" /> Backend Development `65 skills`
 
 > REST/GraphQL/gRPC APIs, microservices, serverless, auth, real-time systems
 
@@ -322,7 +323,7 @@ Other (13 categories)    ██████████████████�
 
 <!-- ═══════════════════════════════════════════ -->
 
-### <img src="https://img.shields.io/badge/-Integrations-6366F1?style=flat-square" /> Integrations & Automation `100 skills`
+### <img src="https://img.shields.io/badge/-Integrations-6366F1?style=flat-square" /> Integrations & Automation `99 skills`
 
 > 50+ SaaS platforms — Slack, GitHub, Jira, Notion, HubSpot, Stripe, and more
 
@@ -513,19 +514,26 @@ Other (13 categories)    ██████████████████�
 
 | Category | Skills | Highlights |
 |----------|--------|------------|
-| <img src="https://img.shields.io/badge/-Docs-64748B?style=flat-square" /> **Documentation** | 35 | `docs-architect`, `api-documentation`, `wiki-architect`, `tutorial-engineer` |
+| <img src="https://img.shields.io/badge/-Docs-64748B?style=flat-square" /> **Documentation** | 34 | `docs-architect`, `api-documentation`, `wiki-architect`, `tutorial-engineer` |
 | <img src="https://img.shields.io/badge/-Health-22C55E?style=flat-square" /> **Health & Wellness** | 19 | `fitness-analyzer`, `nutrition-analyzer`, `sleep-analyzer`, `mental-health-analyzer` |
 | <img src="https://img.shields.io/badge/-FP-A855F7?style=flat-square" /> **Functional Programming** | 15 | `fp-pragmatic`, `fp-async`, `fp-backend`, `fp-react`, `fp-refactor` |
 | <img src="https://img.shields.io/badge/-Science-06B6D4?style=flat-square" /> **Scientific Computing** | 15 | `qiskit`, `biopython`, `scikit-learn`, `matplotlib`, `astropy` |
 | <img src="https://img.shields.io/badge/-Odoo-714B67?style=flat-square" /> **Odoo ERP** | 24 | `odoo-module-developer`, `odoo-orm-expert`, `odoo-accounting-setup` |
 | <img src="https://img.shields.io/badge/-Apple-000?style=flat-square" /> **Apple HIG** | 14 | `hig-foundations`, `hig-patterns`, `hig-components-*` |
-| <img src="https://img.shields.io/badge/-Game-EAB308?style=flat-square" /> **Game Development** | 9 | `unity-developer`, `unreal-engine-cpp-pro`, `godot-gdscript-patterns`, `bevy-ecs-expert` |
+| <img src="https://img.shields.io/badge/-Game-EAB308?style=flat-square" /> **Game Development** | 19 | `unity-developer`, `unreal-engine-cpp-pro`, `godot-gdscript-patterns`, `bevy-ecs-expert` |
 | <img src="https://img.shields.io/badge/-AI%20Personas-F472B6?style=flat-square" /> **AI Personas** | 13 | `steve-jobs`, `elon-musk`, `yann-lecun`, `andrej-karpathy`, `sam-altman` |
 | <img src="https://img.shields.io/badge/-Documents-78716C?style=flat-square" /> **Document Generation** | 13 | `pdf`, `docx`, `pptx`, `xlsx`, `latex-paper-conversion` |
 | <img src="https://img.shields.io/badge/-3D-000?style=flat-square" /> **Three.js** | 13 | `threejs-fundamentals`, `threejs-shaders`, `threejs-animation`, `threejs-materials` |
 | <img src="https://img.shields.io/badge/-Makepad-E44D26?style=flat-square" /> **Makepad** | 13 | `makepad-basics`, `makepad-widgets`, `makepad-shaders`, `makepad-layout` |
 | <img src="https://img.shields.io/badge/-HF-FFD21E?style=flat-square" /> **Hugging Face** | 8 | `hugging-face-model-trainer`, `hugging-face-datasets`, `hugging-face-cli` |
 | <img src="https://img.shields.io/badge/-WordPress-21759B?style=flat-square" /> **WordPress** | 4 | `wordpress`, `wordpress-plugin-development`, `wordpress-theme-development` |
+| <img src="https://img.shields.io/badge/-Context-6B7280?style=flat-square" /> **Context & Memory** | 18 | `context-condensation`, `memory-management`, `session-context` |
+| <img src="https://img.shields.io/badge/-Apify-00C896?style=flat-square" /> **Apify** | 12 | Web scraping actors, crawlers, and automation workflows |
+| <img src="https://img.shields.io/badge/-n8n-EA4B71?style=flat-square" /> **n8n Automation** | 7 | `n8n-workflow`, `n8n-custom-nodes`, `n8n-integration` |
+| <img src="https://img.shields.io/badge/-Conductor-FF6B35?style=flat-square" /> **Conductor** | 7 | Workflow orchestration with Netflix Conductor |
+| <img src="https://img.shields.io/badge/-Robius-E44D26?style=flat-square" /> **Robius** | 5 | Rust-based UI framework for cross-platform apps |
+| <img src="https://img.shields.io/badge/-Leiloeiro-888?style=flat-square" /> **Leiloeiro** | 7 | Auction system development patterns |
+| <img src="https://img.shields.io/badge/-Misc-9CA3AF?style=flat-square" /> **Miscellaneous** | 17 | `libreoffice`, `dwarf-expert`, `evolution`, `projection-patterns` |
 
 ---
 
@@ -602,10 +610,10 @@ cd ~/.claude/skills && git pull
 ## Stats
 
 ```
-Total Skills         1,282       Languages Covered    15+
+Total Skills         1,296       Languages Covered    15+
 Categories              39       SaaS Integrations    50+
 Azure SDKs             120       Frameworks           40+
-Security Skills         80       AI/ML Skills         100
+Security Skills         83       AI/ML Skills         100
 ```
 
 ---
