@@ -142,74 +142,96 @@ cd ~/.claude/skills && git pull
 
 ## 🗂 categories
 
-<details open>
-<summary><b>top 12 by skill count</b></summary>
+The 39 categories cluster into **8 super-groups** by purpose. Skill counts on the right; folder name in `code`.
 
-| # | Category | Skills | What's in it |
-|---|---|---|---|
-| 1 | `azure/` | 120 | Per-SDK + per-language modules (TS / Python / Java / .NET / Rust) covering Azure AI, Storage, Service Bus, Cosmos DB, Key Vault, App Config, Monitor, Identity, etc. |
-| 2 | `ai-ml/` | 100 | Agents · RAG · prompt engineering · voice agents · evals · LangChain/LangGraph · Pydantic AI · multi-agent · LLM ops |
-| 3 | `integrations-automation/` | 99 | 50+ third-party providers — Slack, Stripe, Salesforce, Notion, Jira, Linear, GitHub, Hubspot, Zendesk, Twilio, Sendgrid, … |
-| 4 | `dev-tools/` | 95 | Debugging, refactoring, code review, git workflows, plan-writing, dependency upgrade, codebase audit |
-| 5 | `security/` | 83 | Pentest playbooks, SAST, threat modeling, OWASP top-10, cloud audit, red-team tactics, malware analysis, web3 testing |
-| 6 | `cloud-devops/` | 69 | K8s, Terraform, observability, multi-cloud, GitOps, incident response, CI/CD, distributed tracing, service mesh |
-| 7 | `backend/` | 65 | FastAPI, NestJS, Hono, Convex, Trigger.dev, Cloudflare Workers, gRPC Go, Rails, Spring Boot, microservices patterns |
-| 8 | `frontend/` | 54 | React (Next.js + state mgmt + patterns), Tailwind, shadcn, Astro, SvelteKit, Angular, Avalonia, Vue, animations |
-| 9 | `design-uiux/` | 47 | UI Bot, accessibility audits, Figma, Imagen / Stable Diffusion, fal.ai, Remotion, podcasts, brand systems |
-| 10 | `seo-marketing/` | 42 | SEO content, schema markup, CRO, paid ads, programmatic SEO, viral generators, social orchestration |
-| 11 | `languages/` | 41 | Per-language pros (TypeScript, Python, Go, Rust, C++, Bash, Ruby, Elixir, Scala, …) plus framework guides |
-| 12 | `business-product/` | 41 | Startup analyst, financial modeling, KPIs, market sizing, product manager toolkit, hr, contracts |
+### 🛠 code foundation — 227 skills
+*The day-to-day surface: write code in any language, build APIs, ship UIs, model data.*
 
-</details>
+| Category | # | What's in it |
+|---|---:|---|
+| `backend/` | 65 | Server frameworks — FastAPI, NestJS, Hono, Convex, Trigger.dev, Cloudflare Workers, gRPC Go, Rails, Spring Boot, microservices patterns |
+| `frontend/` | 54 | React (Next.js, state, patterns), Tailwind, shadcn, Astro, SvelteKit, Angular, Vue, animations, accessibility |
+| `languages/` | 41 | Per-language experts — TypeScript, Python, Go, Rust, C++, Bash, Ruby, Elixir, Scala, Kotlin, PHP, C#, Haskell, Julia |
+| `database/` | 27 | PostgreSQL, vector DBs, query optimization, migrations, ORMs (Prisma, Drizzle), Neon, ClickHouse, embedding strategies |
+| `architecture-patterns/` | 25 | DDD, CQRS, event sourcing, sagas, C4 modeling, Clean Code, ADRs, workflow orchestration |
+| `functional-programming/` | 15 | fp-ts, pipe, Either, TaskEither, async patterns, FP refactor, FP React, error modeling |
 
-<details>
-<summary><b>all 39 categories</b></summary>
+### 🧪 workflow & quality — 181 skills
+*The discipline layer — test, debug, review, document, remember.*
 
-| Category | Skills |
-|---|---|
-| `azure/` | 120 |
-| `ai-ml/` | 100 |
-| `integrations-automation/` | 99 |
-| `dev-tools/` | 95 |
-| `security/` | 83 |
-| `cloud-devops/` | 69 |
-| `backend/` | 65 |
-| `frontend/` | 54 |
-| `design-uiux/` | 47 |
-| `seo-marketing/` | 42 |
-| `languages/` | 41 |
-| `business-product/` | 41 |
-| `testing-qa/` | 34 |
-| `docs-writing/` | 34 |
-| `skills-meta/` | 32 |
-| `database/` | 27 |
-| `payments-fintech/` | 25 |
-| `architecture-patterns/` | 25 |
-| `odoo/` | 24 |
-| `health-wellness/` | 19 |
-| `game-dev/` | 19 |
-| `context-memory/` | 18 |
-| `miscellaneous/` | 17 |
-| `scientific-computing/` | 15 |
-| `functional-programming/` | 15 |
-| `hig-apple/` | 14 |
-| `three-js/` | 13 |
-| `makepad/` | 13 |
-| `documents/` | 13 |
-| `ai-personas/` | 13 |
-| `mobile/` | 12 |
-| `apify/` | 12 |
-| `hugging-face/` | 8 |
-| `expo/` | 8 |
-| `n8n-automation/` | 7 |
-| `leiloeiro/` | 7 |
-| `conductor/` | 7 |
-| `robius/` | 5 |
-| `wordpress/` | 4 |
+| Category | # | What's in it |
+|---|---:|---|
+| `dev-tools/` | 95 | Debugging, refactoring, code review, git workflows, plan-writing, dependency upgrade, codebase audit, error tracing |
+| `testing-qa/` | 34 | TDD orchestration, e2e patterns, Playwright, code review checklists, performance testing, test fixing |
+| `docs-writing/` | 34 | Wiki architecture, brand guidelines, scientific writing, mermaid, beautiful prose, doc generators, changelog automation |
+| `context-memory/` | 18 | Context restoration, agent memory, conversation memory, hierarchical agent memory, MCP context, compression |
 
-(verified via `for d in */; do find "$d" -name SKILL.md \| wc -l; done`)
+### ☁️ cloud, infra & security — 272 skills
+*Production reality — provision it, observe it, lock it down.*
 
-</details>
+| Category | # | What's in it |
+|---|---:|---|
+| `azure/` | 120 | Per-SDK + per-language Azure coverage (TS / Python / Java / .NET / Rust) — AI, Storage, Service Bus, Cosmos, Key Vault, Identity, Monitor |
+| `security/` | 83 | Pentest playbooks, SAST, threat modeling, OWASP top-10, cloud audit, red-team tactics, malware analysis, web3 testing |
+| `cloud-devops/` | 69 | K8s, Terraform, observability, multi-cloud, GitOps, incident response, CI/CD, distributed tracing, service mesh |
+
+### 🧠 AI, agents & meta — 152 skills
+*The agent layer itself — and the skills that build skills.*
+
+| Category | # | What's in it |
+|---|---:|---|
+| `ai-ml/` | 100 | Agents, RAG, prompt engineering, voice agents, evals, LangChain/LangGraph, Pydantic AI, multi-agent, LLM ops |
+| `skills-meta/` | 32 | Skill creator, skill router, skill check, claude-code-guide, skill scanner, sentinel, MCP builder |
+| `ai-personas/` | 13 | Persona-driven brainstorming — Steve Jobs, Yann LeCun, Hinton, Karpathy, Sutskever, Tao, Buffett, Musk |
+| `conductor/` | 7 | Multi-track agent orchestration — setup, validate, manage, revert, status, new-track, implement |
+
+### 📱 UI surfaces — mobile, design & game — 144 skills
+*Anywhere a pixel meets a person.*
+
+| Category | # | What's in it |
+|---|---:|---|
+| `design-uiux/` | 47 | UI design, accessibility, Figma, image generation (Imagen / SD / fal), Remotion, podcasts, brand systems, screen-reader testing |
+| `game-dev/` | 19 | Unity, Unreal C++, Godot 4, Bevy ECS, Minecraft Bukkit, GLSL shaders, 2D/3D/mobile/web games |
+| `hig-apple/` | 14 | Apple HIG — components, layout, controls, dialogs, search, content patterns, platforms, foundations |
+| `three-js/` | 13 | Three.js fundamentals, materials, shaders, lighting, animation, postprocessing, geometry, loaders |
+| `makepad/` | 13 | Makepad widgets, layout, shaders, animation, DSL, splash, deployment, fonts |
+| `documents/` | 13 | Office automation — docx, xlsx, pptx, pdf, NotebookLM, LaTeX paper conversion |
+| `mobile/` | 12 | iOS / Android dev, SwiftUI, Jetpack Compose, Flutter, React Native architecture, ASO |
+| `expo/` | 8 | Expo deployment, EAS, Expo UI (Jetpack Compose / SwiftUI), API routes, dev client |
+| `robius/` | 5 | Robius app architecture, state, widgets, Matrix integration, event/action |
+
+### 🔌 integrations & automation — 126 skills
+*Talk to the rest of the internet.*
+
+| Category | # | What's in it |
+|---|---:|---|
+| `integrations-automation/` | 99 | 50+ third-party providers — Slack, Stripe, Salesforce, Notion, Jira, Linear, GitHub, HubSpot, Zendesk, Twilio, SendGrid, Discord, Zoom, … |
+| `apify/` | 12 | Web-scraping actors — lead gen, e-commerce, market research, competitor intel, trend analysis, audience analysis |
+| `hugging-face/` | 8 | HF datasets, jobs, model trainer, evaluation, paper publisher, tool builder, CLI |
+| `n8n-automation/` | 7 | n8n workflow patterns, code-js / code-py, expression syntax, MCP tools, validation, node config |
+
+### 🏢 business & domain verticals — 177 skills
+*Industry-specific expertise — sales, money, science, niches.*
+
+| Category | # | What's in it |
+|---|---:|---|
+| `seo-marketing/` | 42 | SEO content, schema markup, CRO, paid ads, programmatic SEO, viral generators, social orchestration, GEO/AEO fundamentals |
+| `business-product/` | 41 | Startup analyst, financial modeling, KPIs, market sizing, PM toolkit, HR, contracts, compliance, interview coach |
+| `payments-fintech/` | 25 | Stripe, PayPal, Plaid, Lightning, billing automation, PCI compliance, risk metrics, blockchain dev, NFT standards |
+| `odoo/` | 24 | Odoo modules — ORM, CRM, manufacturing, accounting, HR, inventory, security, deployment, l10n compliance |
+| `health-wellness/` | 19 | Health analyzers — skin, mental, fitness, nutrition, sleep, weight-loss, occupational, travel, family, TCM constitution |
+| `scientific-computing/` | 15 | Polars, Plotly, NumPy/SciPy stack, scikit-learn, qiskit, biopython, PubMed/UniProt, SymPy, NetworkX, AstroPy |
+| `leiloeiro/` | 7 | Brazilian auctioneer (leilão) workflows — legal, market, valuation, risk, edital, IA assistance |
+| `wordpress/` | 4 | WordPress plugin dev, theme dev, WooCommerce, general site work |
+
+### 🗂 miscellaneous — 17 skills
+*Catch-all for things that don't fit a clean bucket.*
+
+| Category | # | What's in it |
+|---|---:|---|
+| `miscellaneous/` | 17 | LibreOffice (Writer / Calc / Impress / Draw / Base), project analysis, infinite-gratitude, projection patterns, dwarf-expert, niche modules |
+
+<sub>Counts verified via `for d in */; do find "$d" -name SKILL.md \| wc -l; done`. Super-group totals: code **227** · workflow **181** · cloud **272** · AI **152** · UI **144** · integrations **126** · business **177** · misc **17** → grand total **1,296** ✓. Of those, 1,276 sit at the canonical depth `<category>/<skill>/SKILL.md` and 20 are nested one level deeper as sub-skills (e.g., a parent skill exposing variant flows).</sub>
 
 ---
 
