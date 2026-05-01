@@ -1,0 +1,41 @@
+%%{init: {'theme':'base', 'themeVariables': {
+  'primaryColor':'#0d1117',
+  'primaryTextColor':'#c9d1d9',
+  'primaryBorderColor':'#30363d',
+  'lineColor':'#D97757',
+  'secondaryColor':'#161b22',
+  'tertiaryColor':'#1f6feb',
+  'fontFamily':'JetBrains Mono, ui-monospace, monospace'
+}}}%%
+flowchart LR
+  subgraph User["user"]
+    CMD["/skill-name<br/>or /skill-router"]
+  end
+
+  subgraph CC["Claude Code"]
+    LDR["skill loader"]
+    SES["session context"]
+  end
+
+  subgraph Repo["~/.claude/skills/"]
+    direction TB
+    CAT["39 categories"]
+    SK[("1,296 SKILL.md")]
+    REF["references/<br/>scripts/<br/>examples/<br/>(optional)"]
+  end
+
+  subgraph Frontmatter["each SKILL.md"]
+    NM["name"]
+    DESC["description"]
+    RSK["risk"]
+    SRC["source"]
+    DT["date_added"]
+  end
+
+  CMD --> LDR
+  LDR --> CAT
+  CAT --> SK
+  SK --> REF
+  SK --> Frontmatter
+  LDR --> SES
+  SES -. "domain expert mode" .- CMD
