@@ -14,7 +14,7 @@ import json
 import argparse
 import re
 from datetime import datetime
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any
 from pathlib import Path
 
 
@@ -743,7 +743,7 @@ def create_markdown_document(result: Dict[str, Any], mode: str) -> str:
         status = "✅ PASSED" if validation['passed'] else "⚠️ NEEDS REVIEW"
         doc += f"**{fmt.upper()} Format**: {status} ({validation['score']}/7)\n"
         if validation['issues']:
-            doc += f"Issues:\n"
+            doc += "Issues:\n"
             for issue in validation['issues']:
                 doc += f"- {issue}\n"
         doc += "\n"
@@ -882,7 +882,7 @@ Examples:
     with open(args.output, 'w') as f:
         f.write(markdown_doc)
 
-    print(f"\n✅ Mega-prompt generated successfully!")
+    print("\n✅ Mega-prompt generated successfully!")
     print(f"📁 Output: {args.output}")
     print(f"📊 Total formats: {len(result['formats'])}")
     print(f"⏱️  Generated at: {result['metadata']['generated_at']}")

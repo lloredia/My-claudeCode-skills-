@@ -4,8 +4,7 @@ SEO Content Optimizer - Analyzes and optimizes content for SEO
 """
 
 import re
-from typing import Dict, List, Set
-import json
+from typing import Dict, List
 
 class SEOOptimizer:
     def __init__(self):
@@ -357,16 +356,16 @@ def optimize_content(content: str, keyword: str = None,
         "=== SEO Content Analysis ===",
         f"Overall SEO Score: {results['optimization_score']}/100",
         f"Content Length: {results['content_length']} words",
-        f"",
+        "",
         "Content Structure:",
         f"  Headings: {results['structure_analysis']['headings']['total']}",
         f"  Paragraphs: {results['structure_analysis']['paragraphs']}",
         f"  Avg Paragraph Length: {results['structure_analysis']['avg_paragraph_length']} words",
         f"  Internal Links: {results['structure_analysis']['links']['internal']}",
         f"  External Links: {results['structure_analysis']['links']['external']}",
-        f"",
+        "",
         f"Readability: {results['readability']['level']} (Score: {results['readability']['score']})",
-        f""
+        ""
     ]
     
     if results['keyword_analysis']:
@@ -377,7 +376,7 @@ def optimize_content(content: str, keyword: str = None,
             f"  Count: {kw['count']}",
             f"  Density: {kw['density']:.2%}",
             f"  In First Paragraph: {'Yes' if kw['in_first_paragraph'] else 'No'}",
-            f""
+            ""
         ])
         
         if results['keyword_analysis']['lsi_keywords']:
@@ -392,7 +391,7 @@ def optimize_content(content: str, keyword: str = None,
             f"  Title: {results['meta_suggestions']['title']}",
             f"  Description: {results['meta_suggestions']['meta_description']}",
             f"  URL Slug: {results['meta_suggestions']['url_slug']}",
-            f""
+            ""
         ])
     
     output.extend([

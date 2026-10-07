@@ -2,7 +2,7 @@
 
 import json
 from pathlib import Path
-from typing import List, Optional
+from typing import Optional
 
 from . import schema
 
@@ -129,7 +129,7 @@ def render_compact(report: schema.Report, limit: int = 15, missing_keys: str = "
 
             # Top comment insights
             if item.comment_insights:
-                lines.append(f"  Insights:")
+                lines.append("  Insights:")
                 for insight in item.comment_insights[:3]:
                     lines.append(f"    - {insight}")
 

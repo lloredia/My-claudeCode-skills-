@@ -439,7 +439,7 @@ def print_status(registry: dict):
         return
 
     print(f"\n{'='*80}")
-    print(f"  Agent Orchestrator - Skill Registry Status")
+    print("  Agent Orchestrator - Skill Registry Status")
     print(f"  Scanned at: {registry.get('generated_at', 'N/A')}")
     print(f"  Root: {registry.get('skills_root', 'N/A')}")
     print(f"{'='*80}\n")

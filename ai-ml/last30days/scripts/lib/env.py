@@ -108,7 +108,7 @@ def validate_sources(requested: str, available: str, include_web: bool = False) 
         elif requested == 'web':
             return 'web', None
         else:
-            return 'web', f"No API keys configured. Using WebSearch fallback. Add keys to ~/.config/last30days/.env for Reddit/X."
+            return 'web', "No API keys configured. Using WebSearch fallback. Add keys to ~/.config/last30days/.env for Reddit/X."
 
     if requested == 'auto':
         # Add web to sources if include_web is set

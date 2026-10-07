@@ -16,7 +16,6 @@ Notion Diary Sync Script
 import os
 import sys
 import re
-import json
 import requests
 from datetime import datetime
 from pathlib import Path
@@ -395,7 +394,7 @@ def create_database(parent_page_id: str) -> str:
     result = notion_request("post", "databases", data)
     db_id = result["id"]
     print(f"✅ Created Notion Diary Database: {db_id}")
-    print(f"   請將此 ID 設為環境變數：")
+    print("   請將此 ID 設為環境變數：")
     print(f'   $env:NOTION_DIARY_DB = "{db_id}"')
     return db_id
 
@@ -459,7 +458,7 @@ def main():
         print(f"🔄 更新已有頁面的 Business 區塊 (page: {existing_page})")
         update_business_section(existing_page, metadata, business_blocks)
     else:
-        print(f"📝 建立新頁面（僅 Business 區塊）...")
+        print("📝 建立新頁面（僅 Business 區塊）...")
         biz_blocks = build_business_only_blocks(business_blocks)
         page_id = create_diary_page(metadata, biz_blocks)
         print(f"✅ 已同步到 Notion！(page: {page_id})")

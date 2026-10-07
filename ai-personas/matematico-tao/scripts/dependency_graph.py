@@ -10,14 +10,13 @@ Uso:
   python dependency_graph.py C:/Users/renat/earbudllm --format dot --output deps.dot
 """
 
-import os
 import re
 import sys
 import json
 import argparse
 from pathlib import Path
-from dataclasses import dataclass, field
-from typing import Dict, List, Set, Optional, Tuple
+from dataclasses import dataclass
+from typing import Dict, List, Set, Optional
 
 # Fix Windows terminal encoding (cp1252 doesn't support emojis/unicode)
 if sys.platform == 'win32':
@@ -436,7 +435,7 @@ class ProjectAnalyzer:
             color = module_colors.get(module, '#9E9E9E')
             lines.append(f'  subgraph cluster_{module.replace("-", "_")} {{')
             lines.append(f'    label="{module}";')
-            lines.append(f'    style=filled;')
+            lines.append('    style=filled;')
             lines.append(f'    fillcolor="{color}20";')  # 20 = ~12% opacity
             for node_id, node in nodes[:20]:  # limitar para visualização
                 short_name = node_id.split('.')[-1]
@@ -467,17 +466,17 @@ class ProjectAnalyzer:
         print(f"  SCCs com mais de 1 nó:       {gs['strongly_connected_components']}")
 
         if report['cycles']:
-            print(f"\n❌ CICLOS DE DEPENDÊNCIA (devem ser eliminados):")
+            print("\n❌ CICLOS DE DEPENDÊNCIA (devem ser eliminados):")
             for i, cycle in enumerate(report['cycles'][:5], 1):
                 print(f"  {i}. {' → '.join(c.split('.')[-1] for c in cycle)}")
 
         if report['top_betweenness_centrality']:
-            print(f"\n⚠️  TOP NÓDULOS CRÍTICOS (single points of failure — alto betweenness):")
+            print("\n⚠️  TOP NÓDULOS CRÍTICOS (single points of failure — alto betweenness):")
             for item in report['top_betweenness_centrality'][:5]:
                 short = item['node'].split('.')[-1]
                 print(f"  {short:<35} betweenness={item['betweenness']:.4f}")
 
-        print(f"\n📦 ACOPLAMENTO DE MÓDULOS (Princípio de Martin):")
+        print("\n📦 ACOPLAMENTO DE MÓDULOS (Princípio de Martin):")
         print(f"  {'Módulo':<20} {'Ca':>5} {'Ce':>5} {'I':>8} {'A':>8} {'D':>8}  Status")
         print(f"  {'-'*20} {'-'*5} {'-'*5} {'-'*8} {'-'*8} {'-'*8}  {'-'*20}")
         for mod, data in sorted(report['module_coupling'].items()):

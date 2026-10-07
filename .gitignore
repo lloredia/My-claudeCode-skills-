@@ -1,23 +1,47 @@
-# OS files
+# OS
 .DS_Store
 Thumbs.db
 Desktop.ini
 
-# Editor files
+# Editors
 *.swp
 *.swo
 *~
 .vscode/
 .idea/
 
-# Build artifacts
+# Python
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+venv/
+env/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+/dist/
+.coverage
+htmlcov/
+
+# Node
 node_modules/
-*.log
+.npm/
+.next/
+out/
 
-# Secrets
+# Secrets — copy .env.example and fill values locally
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+!.env.*.example
 
-# Local config
+# Local skill toggles
 .disabled/
+
+# Generated benchmark and media dumps
+*.mp3
+*.mp4
+*.mov
+*.gif

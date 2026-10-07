@@ -6,7 +6,6 @@ Transcreve áudio para texto e gera atas/resumos usando LLM.
 
 import os
 import sys
-import json
 import subprocess
 import shutil
 from datetime import datetime
@@ -17,8 +16,7 @@ try:
     from rich.console import Console
     from rich.prompt import Prompt
     from rich.panel import Panel
-    from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn
-    from rich import print as rprint
+    from rich.progress import Progress, SpinnerColumn, TextColumn
     RICH_AVAILABLE = True
 except ImportError:
     RICH_AVAILABLE = False
@@ -27,8 +25,7 @@ except ImportError:
     from rich.console import Console
     from rich.prompt import Prompt
     from rich.panel import Panel
-    from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn
-    from rich import print as rprint
+    from rich.progress import Progress, SpinnerColumn, TextColumn
 
 # tqdm for progress bars
 try:
@@ -44,7 +41,7 @@ try:
     TRANSCRIBER = "faster-whisper"
 except ImportError:
     try:
-        import whisper
+        import whisper  # noqa: F401  — probe: ImportError selects the error path
         TRANSCRIBER = "whisper"
     except ImportError:
         print("❌ Nenhum engine de transcrição encontrado!")
@@ -430,7 +427,7 @@ def main():
     transcription_data = transcribe_audio(args.audio_file, model=args.model)
     
     # Gerar texto do transcript
-    transcript_text = f"# Transcrição de Áudio\n\n"
+    transcript_text = "# Transcrição de Áudio\n\n"
     transcript_text += f"**Arquivo:** {Path(args.audio_file).name}\n"
     transcript_text += f"**Idioma:** {transcription_data['language'].upper()}\n"
     transcript_text += f"**Data:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"

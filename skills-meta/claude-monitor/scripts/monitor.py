@@ -12,7 +12,6 @@ Uso:
 """
 
 import json
-import os
 import signal
 import subprocess
 import sys
@@ -199,7 +198,7 @@ def format_report(report):
     lines.append(f"- Pico RAM: {report['browsers']['max_ram_gb']} GB")
     lines.append(f"- Media processos: {report['browsers']['avg_processes']}\n")
 
-    lines.append(f"### Recomendacao")
+    lines.append("### Recomendacao")
     lines.append(f"{report['recommendation']}")
 
     return "\n".join(lines)

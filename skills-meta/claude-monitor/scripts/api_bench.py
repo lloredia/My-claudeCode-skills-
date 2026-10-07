@@ -211,7 +211,7 @@ def format_results(results):
         lines.append(f"- {iface['name']}: {speed_str}")
 
     # Diagnóstico
-    lines.append(f"\n### Diagnostico")
+    lines.append("\n### Diagnostico")
     diag = results["diagnosis"]
     status_map = {"critical": "[!!!]", "warning": "[!]", "ok": "[OK]"}
     lines.append(f"{status_map[diag['status']]} {diag['message']}")

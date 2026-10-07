@@ -319,9 +319,9 @@ def main():
                     print(f"Luz:      {tmpl['suggested_lighting']}")
                     print(f"Human:    {tmpl['suggested_humanization']}")
                     print(f"Tags:     {', '.join(tmpl.get('tags', []))}")
-                    print(f"\nPrompt Base:")
+                    print("\nPrompt Base:")
                     print(f"  {tmpl['prompt']}")
-                    print(f"\nContexto:")
+                    print("\nContexto:")
                     print(f"  {tmpl['context']}")
             else:
                 print(f"Template '{args.show}' nao encontrado")

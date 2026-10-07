@@ -25,7 +25,7 @@ def setup_project(language: str, path: str, name: str | None = None) -> None:
 
     if not os.path.exists(boilerplate_dir):
         print(f"Error: Boilerplate not found for language '{language}'")
-        print(f"Available: nodejs, python")
+        print("Available: nodejs, python")
         sys.exit(1)
 
     target_path = os.path.abspath(path)

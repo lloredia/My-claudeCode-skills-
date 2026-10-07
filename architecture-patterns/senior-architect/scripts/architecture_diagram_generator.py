@@ -13,13 +13,12 @@ Supports diagram types:
 - deployment: Shows deployment topology
 """
 
-import os
 import sys
 import json
 import argparse
 import re
 from pathlib import Path
-from typing import Dict, List, Set, Tuple, Optional
+from typing import Dict, List, Set, Tuple
 from collections import defaultdict
 
 

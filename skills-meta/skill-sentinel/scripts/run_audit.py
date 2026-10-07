@@ -15,7 +15,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 
 # Garantir que o diretorio scripts esta no path
 sys.path.insert(0, str(Path(__file__).parent))
@@ -257,20 +257,20 @@ Exemplos:
     else:
         # Exibir resumo no terminal
         print(f"\n{'='*60}")
-        print(f"  SENTINEL - Auditoria do Ecossistema")
+        print("  SENTINEL - Auditoria do Ecossistema")
         print(f"{'='*60}")
         print(f"  Skills analisadas: {result['skills_scanned']}")
         print(f"  Score geral: {result['overall_score']:.0f}/100 ({result['score_label']})")
         print(f"  Total de findings: {result['total_findings']}")
 
         if result.get("findings_by_severity"):
-            print(f"\n  Por severidade:")
+            print("\n  Por severidade:")
             for sev in ["critical", "high", "medium", "low", "info"]:
                 count = result["findings_by_severity"].get(sev, 0)
                 if count:
                     print(f"    {sev:10s}: {count}")
 
-        print(f"\n  Scores por skill:")
+        print("\n  Scores por skill:")
         for snap in result.get("snapshots", []):
             name = snap["skill_name"]
             score = snap["overall_score"]

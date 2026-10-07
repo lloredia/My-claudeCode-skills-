@@ -13,12 +13,11 @@ Usage:
 
 import argparse
 import json
-import os
 import re
 import subprocess
 import sys
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Tuple
 
 
 # File categories for review prioritization

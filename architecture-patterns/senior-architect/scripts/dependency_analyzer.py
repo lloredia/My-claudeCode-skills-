@@ -15,13 +15,12 @@ Supports:
 - Rust (Cargo.toml)
 """
 
-import os
 import sys
 import json
 import argparse
 import re
 from pathlib import Path
-from typing import Dict, List, Set, Tuple, Optional
+from typing import Dict, List, Set, Optional
 from collections import defaultdict
 
 
@@ -501,7 +500,7 @@ def print_human_report(report: Dict):
             print(f"  [{severity}] {issue['message']}")
 
     if report['recommendations']:
-        print(f"\n--- Recommendations ---")
+        print("\n--- Recommendations ---")
         for i, rec in enumerate(report['recommendations'], 1):
             print(f"  {i}. {rec}")
 

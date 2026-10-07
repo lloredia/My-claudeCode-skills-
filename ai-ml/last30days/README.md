@@ -6,6 +6,8 @@
 
 **But also great for anything trending**: music, culture, news, product recommendations, viral trends, or any question where "what are people saying right now?" matters.
 
+> Example images and the sample MP3 were removed from this copy of the skill to keep the collection small. See `assets/README.md` and the upstream repo https://github.com/mvanhorn/last30days-skill.
+
 ## Installation
 
 ```bash
@@ -252,7 +254,6 @@ This example shows /last30days as a **setup guide aggregator** - pulling togethe
 **The Result:**
 
 <p align="center">
-  <img src="assets/swimmom-mockup.jpeg" width="400" alt="SwimMom iOS app mockup"/>
 </p>
 
 This example shows /last30days learning **AI image generation prompting patterns** (JSON structure, layer-based thinking, iOS design system references) and applying them to create a production-quality app mockup in one shot.
@@ -324,9 +325,7 @@ portrait photo, not a cartoon.
 **The Result:**
 
 <p align="center">
-  <img src="assets/dog-original.jpeg" width="300" alt="Original dog photo"/>
   &nbsp;&nbsp;→&nbsp;&nbsp;
-  <img src="assets/dog-as-human.png" width="300" alt="Dog as human"/>
 </p>
 
 Same golden fur → red hair. Same tongue out. Same harness. Same pink tag. ChatGPT nailed it.
@@ -450,7 +449,6 @@ This prompt was generated based on research from 10 Reddit threads (294 upvotes)
 **The Result:**
 
 <p align="center">
-  <img src="assets/aging-portrait.jpeg" width="500" alt="Aging portrait grid - same woman at 10, 20, 40, and 80"/>
 </p>
 
 Same freckles. Same heterochromia. Same bone structure. Four life stages in one coherent image.
@@ -622,7 +620,7 @@ Or am I wide awake and in too deep
 [Outro: fade with glitchy effects]
 ```
 
-**The Result:** 🎵 [Listen to the track](assets/claude-code-rap.mp3)
+**The Result:** sample audio is in the upstream repo (not vendored here).
 
 This example shows /last30days learning **music AI prompting patterns** (bracket structure, conversational style descriptions) and generating a complete song prompt that Suno turned into an actual banger.
 

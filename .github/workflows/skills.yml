@@ -1,0 +1,20 @@
+name: skills
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install linters
+        run: pip install ruff pyyaml
+      - name: Check SKILL.md frontmatter
+        run: python scripts/check_skill_frontmatter.py
+      - name: Ruff
+        run: ruff check .

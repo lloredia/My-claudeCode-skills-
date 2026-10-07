@@ -21,7 +21,7 @@ date_added: "2026-02-27"
 | `agent-coordination.md` | Agent pipeline, execution order | Coordinating multi-agent work |
 | `scaffolding.md` | Directory structure, core files | Creating project structure |
 | `feature-building.md` | Feature analysis, error handling | Adding features to existing project |
-| `templates/SKILL.md` | **Project templates** | Scaffolding new project |
+| `../project-templates/SKILL.md` | **Project templates** | Scaffolding new project |
 
 ---
 
@@ -31,18 +31,18 @@ Quick-start scaffolding for new projects. **Read the matching template only!**
 
 | Template | Tech Stack | When to Use |
 |----------|------------|-------------|
-| [nextjs-fullstack](templates/nextjs-fullstack/TEMPLATE.md) | Next.js + Prisma | Full-stack web app |
-| [nextjs-saas](templates/nextjs-saas/TEMPLATE.md) | Next.js + Stripe | SaaS product |
-| [nextjs-static](templates/nextjs-static/TEMPLATE.md) | Next.js + Framer | Landing page |
-| [nuxt-app](templates/nuxt-app/TEMPLATE.md) | Nuxt 3 + Pinia | Vue full-stack app |
-| [express-api](templates/express-api/TEMPLATE.md) | Express + JWT | REST API |
-| [python-fastapi](templates/python-fastapi/TEMPLATE.md) | FastAPI | Python API |
-| [react-native-app](templates/react-native-app/TEMPLATE.md) | Expo + Zustand | Mobile app |
-| [flutter-app](templates/flutter-app/TEMPLATE.md) | Flutter + Riverpod | Cross-platform mobile |
-| [electron-desktop](templates/electron-desktop/TEMPLATE.md) | Electron + React | Desktop app |
-| [chrome-extension](templates/chrome-extension/TEMPLATE.md) | Chrome MV3 | Browser extension |
-| [cli-tool](templates/cli-tool/TEMPLATE.md) | Node.js + Commander | CLI app |
-| [monorepo-turborepo](templates/monorepo-turborepo/TEMPLATE.md) | Turborepo + pnpm | Monorepo |
+| [nextjs-fullstack](../project-templates/nextjs-fullstack/TEMPLATE.md) | Next.js + Prisma | Full-stack web app |
+| [nextjs-saas](../project-templates/nextjs-saas/TEMPLATE.md) | Next.js + Stripe | SaaS product |
+| [nextjs-static](../project-templates/nextjs-static/TEMPLATE.md) | Next.js + Framer | Landing page |
+| [nuxt-app](../project-templates/nuxt-app/TEMPLATE.md) | Nuxt 3 + Pinia | Vue full-stack app |
+| [express-api](../project-templates/express-api/TEMPLATE.md) | Express + JWT | REST API |
+| [python-fastapi](../project-templates/python-fastapi/TEMPLATE.md) | FastAPI | Python API |
+| [react-native-app](../project-templates/react-native-app/TEMPLATE.md) | Expo + Zustand | Mobile app |
+| [flutter-app](../project-templates/flutter-app/TEMPLATE.md) | Flutter + Riverpod | Cross-platform mobile |
+| [electron-desktop](../project-templates/electron-desktop/TEMPLATE.md) | Electron + React | Desktop app |
+| [chrome-extension](../project-templates/chrome-extension/TEMPLATE.md) | Chrome MV3 | Browser extension |
+| [cli-tool](../project-templates/cli-tool/TEMPLATE.md) | Node.js + Commander | CLI app |
+| [monorepo-turborepo](../project-templates/monorepo-turborepo/TEMPLATE.md) | Turborepo + pnpm | Monorepo |
 
 ---
 

@@ -13,7 +13,6 @@ Generates a standardized AGENT_CONTEXT.md with 5 core sections:
 import os
 import sys
 import json
-import glob
 from pathlib import Path
 from datetime import datetime
 
@@ -88,7 +87,7 @@ def extract_tech_stack(root):
     pyproject = root / "pyproject.toml"
     if pyproject.exists():
         text = pyproject.read_text(encoding="utf-8", errors="ignore")
-        stack_info.append(f"* **Python 專案**：使用 pyproject.toml 管理")
+        stack_info.append("* **Python 專案**：使用 pyproject.toml 管理")
         # Simple dependency extraction
         if "dependencies" in text:
             stack_info.append("* _詳見 pyproject.toml 的 dependencies 區塊_")
@@ -163,7 +162,7 @@ def prepare_context(root_path):
         # Header
         f.write(f"# 專案上下文 (Agent Context)：{root.name}\n\n")
         f.write(f"> **最後更新時間**：{now}\n")
-        f.write(f"> **自動生成**：由 `prepare_context.py` 產生，供 AI Agent 快速掌握專案全局\n\n")
+        f.write("> **自動生成**：由 `prepare_context.py` 產生，供 AI Agent 快速掌握專案全局\n\n")
         f.write("---\n\n")
 
         # Section 1: 專案目標
@@ -175,7 +174,7 @@ def prepare_context(root_path):
             f.write("* **核心目的**：_（請手動補充，或建立 README.md）_\n")
         readme = root / "README.md"
         if readme.exists():
-            f.write(f"* _完整說明見 [README.md](README.md)_\n")
+            f.write("* _完整說明見 [README.md](README.md)_\n")
         f.write("\n")
 
         # Section 2: 技術棧與環境
