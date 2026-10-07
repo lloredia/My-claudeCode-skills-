@@ -12,8 +12,7 @@ Usage:
 
 import argparse
 import json
-import sys
-from typing import Dict, List, Any, Optional
+from typing import Dict, Any
 from datetime import datetime
 import html as html_module
 

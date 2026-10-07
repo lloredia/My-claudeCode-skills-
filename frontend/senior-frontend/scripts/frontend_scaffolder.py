@@ -13,7 +13,6 @@ Usage:
 
 import argparse
 import json
-import os
 import sys
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -909,7 +908,7 @@ def print_result(result: Dict) -> None:
     if result["features"]:
         print(f"Features: {', '.join(result['features'])}")
 
-    print(f"\nNext Steps:")
+    print("\nNext Steps:")
     for step in result["next_steps"]:
         print(f"  $ {step}")
 

@@ -564,10 +564,14 @@ class MobileAuditor:
         has_jest = bool(re.search(r'jest|describe\(|test\(|it\(', content))
 
         testing_tools = []
-        if has_jest: testing_tools.append('Jest')
-        if has_rntl: testing_tools.append('RNTL')
-        if has_detox: testing_tools.append('Detox')
-        if has_maestro: testing_tools.append('Maestro')
+        if has_jest:
+            testing_tools.append('Jest')
+        if has_rntl:
+            testing_tools.append('RNTL')
+        if has_detox:
+            testing_tools.append('Detox')
+        if has_maestro:
+            testing_tools.append('Maestro')
 
         if len(testing_tools) == 0:
             self.warnings.append(f"[Testing] {filename}: No testing framework detected. Consider Jest (unit) + Detox/Maestro (E2E) for mobile.")

@@ -156,7 +156,7 @@ def main():
     print("[2/3] Testing API connection (Phone Number)...")
     api_ok, api_msg = test_api_connection()
     if api_ok:
-        print(f"  OK - Connected successfully")
+        print("  OK - Connected successfully")
         print(f"  {api_msg}")
     else:
         print(f"  FAIL - {api_msg}")

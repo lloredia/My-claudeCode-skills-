@@ -13,7 +13,6 @@ Uso:
 """
 
 import json
-import os
 import socket
 import subprocess
 import sys
@@ -33,7 +32,7 @@ except ImportError:
 sys.path.insert(0, str(Path(__file__).parent))
 from config import (
     BROWSER_NAMES, CLAUDE_NAMES, API_ENDPOINT,
-    THRESHOLDS, classify
+    classify
 )
 
 
@@ -308,7 +307,7 @@ def diagnose(results):
         else:
             summary_lines.append(f"{i}. {sug}")
 
-    summary_lines.append(f"\n### Numeros-chave:")
+    summary_lines.append("\n### Numeros-chave:")
     summary_lines.append(f"- CPU: {cpu['percent']}% | RAM: {ram['percent']}% ({ram['used_gb']}/{ram['total_gb']} GB)")
     summary_lines.append(f"- Browsers: {browsers['total_processes']} processos, {browsers['total_ram_gb']} GB")
     summary_lines.append(f"- Claude Code: {claude['count']} processos, {claude['total_ram_gb']} GB")
@@ -355,7 +354,7 @@ def main():
         print(json.dumps(results, indent=2, ensure_ascii=False))
     else:
         print(results["diagnosis"]["summary"])
-        print(f"\n(Para output completo em JSON, use: python health_check.py --json)")
+        print("\n(Para output completo em JSON, use: python health_check.py --json)")
 
 
 if __name__ == "__main__":

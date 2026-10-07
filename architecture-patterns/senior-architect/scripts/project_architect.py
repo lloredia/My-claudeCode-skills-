@@ -11,13 +11,12 @@ Analyzes project structure and detects:
 Provides architecture assessment and improvement recommendations.
 """
 
-import os
 import sys
 import json
 import argparse
 import re
 from pathlib import Path
-from typing import Dict, List, Set, Tuple, Optional
+from typing import Dict, List, Set, Optional
 from collections import defaultdict
 
 
@@ -596,12 +595,12 @@ def print_human_report(report: Dict):
     print(f"\nProject: {report['project_path']}")
 
     arch = report['architecture']
-    print(f"\n--- Architecture Pattern ---")
+    print("\n--- Architecture Pattern ---")
     print(f"Detected: {arch['detected_pattern'].replace('_', ' ').title()}")
     print(f"Confidence: {arch['confidence']}%")
 
     if arch['layer_assignments']:
-        print(f"\nLayer Assignments:")
+        print("\nLayer Assignments:")
         for dir_name, layer in sorted(arch['layer_assignments'].items()):
             if layer != 'unknown':
                 status = "OK"
@@ -610,13 +609,13 @@ def print_human_report(report: Dict):
             print(f"  {status} {dir_name:20} -> {layer}")
 
     summary = report['summary']
-    print(f"\n--- Summary ---")
+    print("\n--- Summary ---")
     print(f"Total issues: {summary['total_issues']}")
     print(f"  Code issues: {summary['code_issues']}")
     print(f"  Layer violations: {summary['layer_violations']}")
 
     if report['code_quality']['issues']:
-        print(f"\n--- Code Issues ---")
+        print("\n--- Code Issues ---")
         for issue in report['code_quality']['issues'][:10]:
             severity = issue['severity'].upper()
             print(f"  [{severity}] {issue.get('file', 'N/A')}")
@@ -625,18 +624,18 @@ def print_human_report(report: Dict):
                 print(f"          Suggestion: {issue['suggestion']}")
 
     if report['layer_violations']:
-        print(f"\n--- Layer Violations ---")
+        print("\n--- Layer Violations ---")
         for v in report['layer_violations'][:5]:
             print(f"  {v['file']}")
             print(f"      {v['message']}")
 
     if report['recommendations']:
-        print(f"\n--- Recommendations ---")
+        print("\n--- Recommendations ---")
         for i, rec in enumerate(report['recommendations'], 1):
             print(f"  {i}. {rec}")
 
     metrics = report['code_quality']['metrics']
-    print(f"\n--- Metrics ---")
+    print("\n--- Metrics ---")
     print(f"  Total lines: {metrics.get('total_lines', 'N/A')}")
     print(f"  File count: {metrics.get('file_count', 'N/A')}")
     print(f"  Avg lines/file: {metrics.get('avg_file_lines', 'N/A')}")

@@ -400,7 +400,7 @@ def analyze_pyproject_toml(filepath: Path, verbose: bool = False) -> dict:
                     line=line_num,
                     severity="MEDIUM",
                     description=f"Dependency '{pkg_name}' has loose version spec '{version_spec}'",
-                    recommendation=f"Pin to exact version with ==",
+                    recommendation="Pin to exact version with ==",
                     pattern="unpinned_dependency",
                 ))
             else:
@@ -488,7 +488,7 @@ def analyze_pipfile(filepath: Path, verbose: bool = False) -> dict:
                     line=line_num,
                     severity="MEDIUM",
                     description=f"Dependency '{pkg_name}' version '{version_spec}' is not exact",
-                    recommendation=f"Pin to exact version with ==",
+                    recommendation="Pin to exact version with ==",
                     pattern="unpinned_dependency",
                 ))
             continue

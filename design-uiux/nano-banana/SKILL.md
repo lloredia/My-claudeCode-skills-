@@ -540,6 +540,8 @@ Add Catalyst AI branding to ANY generated image.
 
 ### Logo Assets
 
+Large Catalyst PNG logos are not vendored in this copy of the skill (see `assets/README.md`). Supply your own logo path in the ImageMagick commands below.
+
 Located in `assets/`:
 - `catalyst-watermark-logo.png` - **Primary watermark** - circular badge with "CATALYST AI / SERVICES" and waving robot
 - `catalyst-logo-transparent.png` - Full wordmark logo with tagline (for headers)

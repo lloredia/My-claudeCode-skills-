@@ -7,7 +7,7 @@ Manages cleanup of skill data and browser state
 import shutil
 import argparse
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Dict, Any
 
 
 class CleanupManager:
@@ -284,7 +284,7 @@ Examples:
         print("\n🗑️ Performing cleanup...")
         result = manager.perform_cleanup(args.preserve_library, dry_run=False)
 
-        print(f"\n✅ Cleanup complete!")
+        print("\n✅ Cleanup complete!")
         print(f"  Deleted: {result['deleted_count']} items")
         print(f"  Freed: {manager._format_size(result['deleted_size'])}")
 

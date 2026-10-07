@@ -28,7 +28,6 @@ from config import (
     FORMAT_ALIASES,
     OUTPUTS_DIR,
     OUTPUT_SETTINGS,
-    get_api_key,
     get_all_api_keys,
     safety_check_model,
     safety_check_daily_limit,
@@ -385,7 +384,7 @@ def generate(
                     time.sleep(wait_time)
                     break  # Break inner loop to retry all keys
                 else:
-                    print(f"\n  ERRO: Todas as tentativas falharam.")
+                    print("\n  ERRO: Todas as tentativas falharam.")
                     print(f"  Ultimo erro: {error_msg[:200]}")
                     print()
                     if is_rate_limit:

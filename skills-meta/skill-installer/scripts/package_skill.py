@@ -111,7 +111,7 @@ def validate_for_web(skill_dir: Path) -> dict:
         if len(name) > 64:
             errors.append(f"Name exceeds 64 characters: {len(name)}")
         if "anthropic" in name_lower or "claude" in name_lower:
-            errors.append(f"Name cannot contain reserved words 'anthropic' or 'claude'")
+            errors.append("Name cannot contain reserved words 'anthropic' or 'claude'")
 
     # Description: required, max 1024 chars
     desc = meta.get("description", "")

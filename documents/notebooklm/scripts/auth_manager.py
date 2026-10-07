@@ -17,7 +17,7 @@ import shutil
 import re
 import sys
 from pathlib import Path
-from typing import Optional, Dict, Any
+from typing import Dict, Any
 from urllib.parse import urlparse
 
 from patchright.sync_api import sync_playwright, BrowserContext
@@ -142,7 +142,7 @@ class AuthManager:
                 timeout_ms = int(timeout_minutes * 60 * 1000)
                 page.wait_for_url(re.compile(r"^https://notebooklm\.google\.com/"), timeout=timeout_ms)
 
-                print(f"  ✅ Login successful!")
+                print("  ✅ Login successful!")
 
                 # Save authentication state
                 self._save_browser_state(context)

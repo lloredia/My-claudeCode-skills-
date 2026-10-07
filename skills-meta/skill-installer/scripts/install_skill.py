@@ -726,11 +726,11 @@ def install_single(
             f"Use --force to overwrite."
         )
         if verbose:
-            _fail(f"Conflict: skill already exists. Use --force to overwrite.")
+            _fail("Conflict: skill already exists. Use --force to overwrite.")
         return result
     if verbose:
         if conflicts["has_conflicts"]:
-            _warn(f"Conflict detected -- will overwrite (--force)")
+            _warn("Conflict detected -- will overwrite (--force)")
         else:
             _ok("No conflicts")
 
@@ -1363,7 +1363,7 @@ def reinstall_all(force: bool = True, verbose: bool = True) -> dict:
 
     # Final registry update
     if verbose:
-        print(f"\n  Updating registry...")
+        print("\n  Updating registry...")
     step8_update_registry()
 
     registered_ok = sum(1 for r in results_list if r["registered"])
@@ -1622,28 +1622,28 @@ def main():
     if not source and not do_detect:
         print(f"\n{_C.bold(_C.cyan('Skill Installer v' + VERSION))}\n")
         print(f"  {_C.bold('Install:')}")
-        print(f"    --source <path>                  Install skill from path")
-        print(f"    --source <path> --force           Overwrite if exists")
-        print(f"    --source <path> --name <name>     Custom name override")
-        print(f"    --source <path> --dry-run         Simulate without changes")
-        print(f"    --detect                          Auto-detect uninstalled skills")
-        print(f"    --detect --auto                   Detect and install all")
-        print(f"")
+        print("    --source <path>                  Install skill from path")
+        print("    --source <path> --force           Overwrite if exists")
+        print("    --source <path> --name <name>     Custom name override")
+        print("    --source <path> --dry-run         Simulate without changes")
+        print("    --detect                          Auto-detect uninstalled skills")
+        print("    --detect --auto                   Detect and install all")
+        print("")
         print(f"  {_C.bold('Manage:')}")
-        print(f"    --uninstall <name>               Uninstall (with backup)")
-        print(f"    --rollback <name>                Restore from latest backup")
-        print(f"    --reinstall-all                  Re-register + re-package all skills")
-        print(f"")
+        print("    --uninstall <name>               Uninstall (with backup)")
+        print("    --rollback <name>                Restore from latest backup")
+        print("    --reinstall-all                  Re-register + re-package all skills")
+        print("")
         print(f"  {_C.bold('Monitor:')}")
-        print(f"    --health                         Health check all skills")
-        print(f"    --health --repair                Health check + auto-fix issues")
-        print(f"    --status                         Rich status dashboard")
-        print(f"    --log [N]                        Show last N operations (default: 20)")
-        print(f"")
+        print("    --health                         Health check all skills")
+        print("    --health --repair                Health check + auto-fix issues")
+        print("    --status                         Rich status dashboard")
+        print("    --log [N]                        Show last N operations (default: 20)")
+        print("")
         print(f"  {_C.bold('Flags:')}")
-        print(f"    --json                           Output JSON instead of pretty text")
-        print(f"    --force                          Force overwrite")
-        print(f"    --dry-run                        Simulate without changes")
+        print("    --json                           Output JSON instead of pretty text")
+        print("    --force                          Force overwrite")
+        print("    --dry-run                        Simulate without changes")
         print()
         sys.exit(1)
 
@@ -1678,7 +1678,7 @@ def main():
                     valid = _C.green(_C.OK) if c.get("valid_frontmatter") else _C.red(_C.FAIL)
                     print(f"  {i}. {_C.bold(name)} {valid}")
                     print(f"     {_C.dim(src)} ({loc})")
-                print(f"\n  Run with --auto to install all, or --source <path> to install one.\n")
+                print("\n  Run with --auto to install all, or --source <path> to install one.\n")
             sys.exit(0)
 
         # Auto mode: install all candidates

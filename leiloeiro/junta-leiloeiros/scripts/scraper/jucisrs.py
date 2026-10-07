@@ -240,7 +240,6 @@ class JucisrsScraper(AbstractJuntaScraper):
         """Playwright com SSL completamente desabilitado para cert autoassinado."""
         try:
             from playwright.async_api import async_playwright
-            from bs4 import BeautifulSoup
             async with async_playwright() as pw:
                 browser = await pw.chromium.launch(
                     headless=True,

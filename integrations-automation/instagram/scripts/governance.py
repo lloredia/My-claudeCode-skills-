@@ -9,12 +9,10 @@ from __future__ import annotations
 
 import json
 import uuid
-from datetime import datetime, timezone
 from typing import Any, Dict, Optional
 
 from config import (
     ACTION_CATEGORIES,
-    RATE_LIMIT_DMS_PER_HOUR,
     RATE_LIMIT_HASHTAGS_PER_WEEK,
     RATE_LIMIT_PUBLISHES_PER_DAY,
     RATE_LIMIT_REQUESTS_PER_HOUR,

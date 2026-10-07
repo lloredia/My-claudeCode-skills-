@@ -3,7 +3,6 @@ Compressão inteligente e arquivamento de sessões antigas.
 Mantém o histórico enxuto sem perder informação crítica.
 """
 
-import shutil
 from datetime import datetime
 from pathlib import Path
 

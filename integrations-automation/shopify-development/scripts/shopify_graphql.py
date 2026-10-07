@@ -398,7 +398,6 @@ def build_gid(resource_type: str, id: str) -> str:
 
 def main():
     """Example usage of ShopifyGraphQL client."""
-    import os
 
     # Load from environment
     shop = os.environ.get('SHOP_DOMAIN', 'your-store.myshopify.com')

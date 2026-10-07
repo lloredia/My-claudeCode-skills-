@@ -21,7 +21,7 @@ from typing import List, Optional
 # Ajusta PYTHONPATH para imports relativos funcionarem
 sys.path.insert(0, str(Path(__file__).parent))
 
-from scraper.states import SCRAPERS, get_all_scrapers, get_scraper
+from scraper.states import SCRAPERS, get_scraper
 from db import Database
 
 logging.basicConfig(
@@ -142,7 +142,7 @@ async def run(estados: Optional[List[str]], concurrency: int, dry_run: bool) -> 
 
     # Resumo final
     print("\n" + "=" * 60)
-    print(f"RESUMO DA COLETA")
+    print("RESUMO DA COLETA")
     print("=" * 60)
     ok = [e for e in log_entries if e["status"] == "OK"]
     vazios = [e for e in log_entries if e["status"] == "VAZIO"]
